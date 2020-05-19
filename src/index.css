@@ -1,13 +1,155 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import url(https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap);
+@font-face {
+  font-family: 'archiaregular';
+  src: url("./fonts/archia-regular-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+@font-face {
+  font-family: 'modernplate';
+  src: url("./fonts/ModernPlate.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent; }
+  *:focus, *:active {
+    outline: none !important; }
+
+html {
+  font-size: 62.5%;
+  background-color: #000;
+  scroll-behavior: smooth;
+  overflow-x: hidden; }
+  @media only screen and (max-width: 100em) {
+    html {
+      font-size: 60%; } }
+  @media only screen and (max-width: 90em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 65em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 44em) {
+    html {
+      font-size: 40%; } }
+
+body {
+  font-family: "archiaregular", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased; }
+
+a:link,
+a:visited {
+  color: #0d65f1; }
+
+a:focus,
+a:active {
+  outline: none; }
+
+::-moz-selection {
+  background-color: #444;
+  color: #222; }
+
+::selection {
+  background-color: #444;
+  color: #222; }
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #000; }
+
+body::-webkit-scrollbar {
+  width: 7px;
+  background-color: #000; }
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #222; }
+
+.landing {
+  height: 100vh;
+  width: 100vw;
+  background-size: 300% 300%;
+  background-image: linear-gradient(45deg, #855988, #483475, #141852, #070b34);
+  animation: gradientBG 12s cubic-bezier(0.7, 0, 0.2, 1) infinite;
+  color: #f7f7f2;
+  font-weight: 500;
+  font-size: 3rem; }
+  .landing-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 10%; }
+    .landing-top-logo {
+      font-family: "modernplate";
+      font-size: 4rem; }
+    .landing-top-nav {
+      display: flex;
+      font-size: 2.6rem; }
+      .landing-top-nav > * {
+        margin-left: 4rem; }
+        .landing-top-nav > *::after {
+          content: "";
+          position: relative;
+          display: block;
+          height: 3px;
+          width: 100%;
+          background-color: #fff;
+          transform: scaleX(0);
+          transform-origin: 0%;
+          transition: transform 300ms ease;
+          top: 2px; }
+        .landing-top-nav > *:hover::after {
+          transform: scaleX(1); }
+        .landing-top-nav > *:hover {
+          cursor: pointer; }
+  .landing-heading {
+    font-family: "Ubuntu";
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 70%;
+    width: 70%;
+    padding: 10% 10% 5rem;
+    line-height: 1.6; }
+    .landing-heading-top-title {
+      font-size: 5rem; }
+    .landing-heading-top-subtitle {
+      margin-top: 3rem;
+      font-size: 3.2rem;
+      width: 80%; }
+    .landing-heading-bottom::after {
+      content: "";
+      position: relative;
+      display: block;
+      height: 3px;
+      width: 100%;
+      background-color: #fff;
+      transform: scaleX(0);
+      transform-origin: 0%;
+      transition: transform 300ms ease;
+      top: 2px; }
+    .landing-heading-bottom:hover::after {
+      transform: scaleX(1); }
+    .landing-heading-bottom:hover {
+      cursor: pointer; }
+
+@keyframes gradientBG {
+  0% {
+    background-position: 100% 0%; }
+  50% {
+    background-position: 30% 0%; }
+  100% {
+    background-position: 100% 0%; } }
+
+.section-one {
+  height: 50vh;
+  background-color: #04061A; }

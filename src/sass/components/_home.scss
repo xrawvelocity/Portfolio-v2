@@ -1,0 +1,76 @@
+.landing {
+  height: 100vh;
+  width: 100vw;
+  background-size: 300% 300%;
+  background-image: linear-gradient(45deg, #855988, #483475, #141852, #070b34);
+  animation: gradientBG 12s cubic-bezier(0.7, 0, 0.2, 1) infinite;
+  color: #f7f7f2;
+  font-weight: 500;
+  font-size: 3rem;
+
+  &-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 10%;
+
+    &-logo {
+      font-family: "modernplate";
+      font-size: 4rem;
+    }
+
+    &-nav {
+      display: flex;
+      font-size: 2.6rem;
+
+      & > * {
+        margin-left: 4rem;
+        @include animBorder(300ms);
+      }
+    }
+  }
+
+  &-heading {
+    font-family: "Ubuntu";
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 70%;
+    width: 70%;
+    padding: 10% 10% 5rem;
+    line-height: 1.6;
+
+    &-top {
+      &-title {
+        font-size: 5rem;
+      }
+      &-subtitle {
+        margin-top: 3rem;
+        font-size: 3.2rem;
+        width: 80%;
+      }
+    }
+
+    &-bottom {
+      @include animBorder(300ms);
+    }
+  }
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 30% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+
+.section-one {
+  height: 50vh;
+  background-color: #04061A;
+}

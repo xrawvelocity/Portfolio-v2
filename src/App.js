@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <main className="landing">
+          <nav className="landing-top">
+            <div className="landing-top-logo">VD</div>
+            <div className="landing-top-nav">
+              <div>Work</div>
+              <div>About</div>
+              <div>Contact</div>
+            </div>
+          </nav>
+          <div className="landing-heading">
+            <div className="landing-heading-top">
+              <h2 className="landing-heading-top-title">
+                Hi! I'm Victor, a freelance full-stack developer based in Miami,
+                FL.
+              </h2>
+              <p className="landing-heading-top-subtitle">
+                I craft creative and result-oriented
+                websites for forward-thinking brands, like yours.
+              </p>
+            </div>
+            <div className="landing-heading-bottom">
+              Learn More <FontAwesomeIcon icon={faChevronRight} />
+            </div>
+          </div>
+        </main>
+        <section className="section-one">
+          TESTING
+        </section>
+      </div>
+    );
+  }
 }
-
-export default App;
