@@ -7,6 +7,19 @@ export default class App extends React.Component {
     return (
       <div>
         <main className="landing">
+          <span className="star star-1"></span>
+          <span className="star star-2"></span>
+          <span className="star star-3"></span>
+          <span className="star star-4"></span>
+
+          <div className="shooting-star-container">
+            <span className="shooting-star"></span>
+            <span className="shooting-star"></span>
+            <span className="shooting-star"></span>
+            <span className="shooting-star"></span>
+            <span className="shooting-star"></span>
+          </div>
+
           <nav className="landing-top">
             <div className="landing-top-logo">VD</div>
             <div className="landing-top-nav">
@@ -22,8 +35,8 @@ export default class App extends React.Component {
                 FL.
               </h2>
               <p className="landing-heading-top-subtitle">
-                I craft creative and result-oriented
-                websites for forward-thinking brands, like yours.
+                I craft creative and result-oriented websites for
+                forward-thinking brands, like yours.
               </p>
             </div>
             <div className="landing-heading-bottom">
@@ -31,9 +44,7 @@ export default class App extends React.Component {
             </div>
           </div>
         </main>
-        <section className="section-one">
-          TESTING
-        </section>
+        <section className="section-one">TESTING</section>
       </div>
     );
   }

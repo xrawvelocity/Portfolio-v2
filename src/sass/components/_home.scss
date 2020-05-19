@@ -2,7 +2,7 @@
   height: 100vh;
   width: 100vw;
   background-size: 300% 300%;
-  background-image: linear-gradient(45deg, #855988, #483475, #141852, #070b34);
+  background-image: linear-gradient(45deg, #855988, #483475, #141852, #040724);
   animation: gradientBG 12s cubic-bezier(0.7, 0, 0.2, 1) infinite;
   color: #f7f7f2;
   font-weight: 500;
@@ -13,6 +13,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 5rem 10%;
+    animation: moveInTop 1s ease 0.75s;
+    animation-fill-mode: backwards;
 
     &-logo {
       font-family: "modernplate";
@@ -44,33 +46,158 @@
     &-top {
       &-title {
         font-size: 5rem;
+        animation: moveInBottom 1s ease 0.75s;
+        animation-fill-mode: backwards;
       }
       &-subtitle {
         margin-top: 3rem;
         font-size: 3.2rem;
         width: 80%;
+        animation: moveInBottom 1s ease 1s;
+        animation-fill-mode: backwards;
       }
     }
 
     &-bottom {
       @include animBorder(300ms);
+      animation: moveInBottom 1s ease 1.25s;
+      animation-fill-mode: backwards;
     }
   }
 }
 
-@keyframes gradientBG {
-  0% {
-    background-position: 100% 0%;
+.star {
+  position: absolute;
+
+  &-1 {
+    top: 60%;
+    left: 75%;
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 50%;
+    background-color: #fff;
+    animation: shine 5s ease 3s infinite;
   }
-  50% {
-    background-position: 30% 0%;
+  &-2 {
+    top: 84%;
+    left: 84%;
+    width: 1.1rem;
+    height: 1.1rem;
+    border-radius: 50%;
+    background-color: #fff;
+    animation: shine 5s ease 1s infinite;
   }
-  100% {
-    background-position: 100% 0%;
+  &-3 {
+    top: 50%;
+    left: 62%;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    background-color: #fff;
+    animation: shine 5s ease 2s infinite;
   }
+  &-4 {
+    top: 30%;
+    left: 80%;
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    background-color: #fff;
+    animation: shine 5s ease 5s infinite;
+  }
+}
+
+.shooting-star-container {
+  position: absolute;
+  top: 60%;
+  left: 75%;
+  transform: rotateZ(45deg);
+}
+
+.shooting-star {
+  position: absolute;
+  top: 60%;
+  left: 60%;
+  height: 2px;
+  background: linear-gradient(-45deg, #5f91ff, rgba(0, 0, 255, 0));
+  filter: drop-shadow(0 0 6px #699bff);
+  animation: tail 4000ms ease-in-out infinite,
+    shooting 4000ms ease-in-out infinite;
+}
+
+.shooting-star::before,
+.shooting-star::after {
+  position: absolute;
+  content: "";
+  top: calc(50% - 1px);
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    -45deg,
+    rgba(0, 0, 255, 0),
+    #5f91ff,
+    rgba(0, 0, 255, 0)
+  );
+  border-radius: 100%;
+  transform: translateX(50%) rotateZ(45deg);
+  animation: shining 4000ms ease-in-out infinite;
+}
+
+.shooting-star::after {
+  transform: translateX(50%) rotateZ(-45deg);
+}
+
+.shooting-star:nth-child(1) {
+  top: calc(50% - 200px);
+  left: calc(50% - 300px);
+  animation-delay: 650ms;
+}
+.shooting-star:nth-child(1)::before,
+.shooting-star:nth-child(1)::after {
+  animation-delay: 650ms;
+}
+
+.shooting-star:nth-child(2) {
+  top: calc(50% - -50px);
+  left: calc(50% - 190px);
+  animation-delay: 150ms;
+}
+.shooting-star:nth-child(2)::before,
+.shooting-star:nth-child(2)::after {
+  animation-delay: 150ms;
+}
+
+.shooting-star:nth-child(3) {
+  top: calc(50% - -90px);
+  left: calc(50% - 200px);
+  animation-delay: 1600ms;
+}
+.shooting-star:nth-child(3)::before,
+.shooting-star:nth-child(3)::after {
+  animation-delay: 1600ms;
+}
+
+.shooting-star:nth-child(4) {
+  top: calc(50% - 50px);
+  left: calc(50% - 250px);
+  animation-delay: 4700ms;
+}
+.shooting-star:nth-child(4)::before,
+.shooting-star:nth-child(4)::after {
+  animation-delay: 4700ms;
+}
+
+.shooting-star:nth-child(5) {
+  top: calc(50% - -190px);
+  left: calc(50% - 200px);
+  animation-delay: 2100ms;
+}
+.shooting-star:nth-child(5)::before,
+.shooting-star:nth-child(5)::after {
+  animation-delay: 2100ms;
 }
 
 .section-one {
   height: 50vh;
-  background-color: #04061A;
+  background-color: #04061a;
 }
