@@ -1,51 +1,29 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import Home from "./components/Home";
+import Work from "./components/Work";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import { Switch, Route, Link } from "react-router-dom";
 
 export default class App extends React.Component {
   render() {
     return (
-      <div>
-        <main className="landing">
-          <span className="star star-1"></span>
-          <span className="star star-2"></span>
-          <span className="star star-3"></span>
-          <span className="star star-4"></span>
-
-          <div className="shooting-star-container">
-            <span className="shooting-star"></span>
-            <span className="shooting-star"></span>
-            <span className="shooting-star"></span>
-            <span className="shooting-star"></span>
-            <span className="shooting-star"></span>
+      <main className="landing">
+      <nav className="landing-top">
+          <Link to="/" className="landing-top-logo ">VD</Link>
+          <div className="landing-top-nav">
+            <Link to="/work">Work</Link>
+            <Link to="/about">About</Link>
+            <Link to="/contact">Contact</Link>
           </div>
-
-          <nav className="landing-top">
-            <div className="landing-top-logo">VD</div>
-            <div className="landing-top-nav">
-              <div>Work</div>
-              <div>About</div>
-              <div>Contact</div>
-            </div>
-          </nav>
-          <div className="landing-heading">
-            <div className="landing-heading-top">
-              <h2 className="landing-heading-top-title">
-                Hi! I'm Victor, a freelance full-stack developer based in Miami,
-                FL.
-              </h2>
-              <p className="landing-heading-top-subtitle">
-                I craft creative and result-oriented websites for
-                forward-thinking brands, like yours.
-              </p>
-            </div>
-            <div className="landing-heading-bottom">
-              Learn More <FontAwesomeIcon icon={faChevronRight} />
-            </div>
-          </div>
-        </main>
-        <section className="section-one">TESTING</section>
-      </div>
+        </nav>
+      <Switch>
+        <Route exact path="/" render={(props) => <Home {...props} />} />
+        <Route exact path="/work" render={(props) => <Work {...props} />} />
+        <Route exact path="/about" render={(props) => <About {...props} />} />
+        <Route exact path="/contact" render={(props) => <Contact {...props} />} />
+      </Switch>
+      </main>
     );
   }
 }
