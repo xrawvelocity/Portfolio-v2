@@ -98,8 +98,7 @@
 html {
   font-size: 62.5%;
   background-color: #000;
-  scroll-behavior: smooth;
-  overflow: hidden; }
+  scroll-behavior: smooth; }
   @media only screen and (max-width: 100em) {
     html {
       font-size: 60%; } }
@@ -690,7 +689,7 @@ body::-webkit-scrollbar-thumb {
   @media only screen and (max-width: 44em) {
     .work-popup {
       height: 100%;
-      padding: 30% 5%;
+      padding: 20% 5%;
       background-color: rgba(0, 0, 0, 0.9);
       display: flex;
       align-items: center;
@@ -704,7 +703,7 @@ body::-webkit-scrollbar-thumb {
     @media only screen and (max-width: 44em) {
       .work-popup-content {
         flex-direction: column;
-        height: 85vh;
+        height: 90%;
         padding: 3rem; } }
   .work-popup-demo {
     background-size: contain;
@@ -936,7 +935,22 @@ body::-webkit-scrollbar-thumb {
 
 .about {
   animation: fadeIn 0.5s ease-out 0.5s;
-  animation-fill-mode: backwards; }
+  animation-fill-mode: backwards;
+  overflow-y: visible; }
+  .about-services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+    column-gap: 10rem;
+    row-gap: 5rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem; }
+    .about-services-each {
+      width: 100%; }
+      .about-services-each-container-title {
+        font-size: 3.2rem;
+        font-weight: 800;
+        margin-bottom: 1rem; }
   .about-story {
     display: flex;
     flex-direction: column;
@@ -946,14 +960,14 @@ body::-webkit-scrollbar-thumb {
     .about-story-title {
       margin: 2rem 0 5rem; }
     .about-story-paragraph {
-      text-align: center;
       width: 50%; }
       @media only screen and (max-width: 44em) {
         .about-story-paragraph {
           width: 100%; } }
   .about-skills {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    padding-bottom: 10rem; }
     @media only screen and (max-width: 44em) {
       .about-skills {
         padding-bottom: 10rem; } }
@@ -963,15 +977,17 @@ body::-webkit-scrollbar-thumb {
       display: inline; }
     .about-skills-list {
       display: grid;
-      grid-template-columns: repeat(auto-fill, 30vw);
-      margin: 3rem 10%;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      padding: 3rem 0 0 20rem;
+      margin: 0 auto;
       justify-content: center;
+      align-items: center;
       width: 100%; }
       @media only screen and (max-width: 44em) {
         .about-skills-list {
-          grid-template-columns: repeat(auto-fill, 45%);
-          padding: 3rem 0 0 5rem;
-          margin: 0;
+          grid-template-columns: repeat(auto-fit, 200px);
+          padding: 3rem 0 0 15rem;
+          margin: 0 auto;
           overflow-x: hidden; } }
       .about-skills-list-each {
         display: flex;
@@ -996,7 +1012,7 @@ body::-webkit-scrollbar-thumb {
             background-repeat: no-repeat;
             background-position: center;
             background-color: #fff; }
-          .about-skills-list-each-image-sass {
+          .about-skills-list-each-image-SASS {
             background-image: url("../images/logos/sasslogo.svg");
             background-size: contain;
             background-repeat: no-repeat;
@@ -1031,8 +1047,13 @@ body::-webkit-scrollbar-thumb {
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center; }
-          .about-skills-list-each-image-html {
+          .about-skills-list-each-image-HTML {
             background-image: url("../images/logos/htmllogo.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center; }
+          .about-skills-list-each-image-CSS {
+            background-image: url("../images/logos/csslogo.png");
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center; }

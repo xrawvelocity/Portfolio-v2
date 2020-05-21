@@ -12,7 +12,7 @@
 
   @include respond(phone) {
     height: 100%;
-    padding: 30% 5%;
+    padding: 20% 5%;
     background-color: rgba(0, 0, 0, 0.9);
     display: flex;
     align-items: center;
@@ -28,7 +28,7 @@
 
     @include respond(phone) {
       flex-direction: column;
-      height: 85vh;
+      height: 90%;
       padding: 3rem;
     }
   }

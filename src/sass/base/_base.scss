@@ -30,7 +30,7 @@ html {
   font-size: 62.5%;
   background-color: #000;
   scroll-behavior: smooth;
-  overflow: hidden;
+  
 
   @include respond(normal-desktop) {
     //width < 1600px
