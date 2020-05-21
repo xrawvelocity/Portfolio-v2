@@ -28,7 +28,7 @@
 
     @include respond(phone) {
       flex-direction: column;
-      height: 90%;
+      height: 85vh;
       padding: 3rem;
     }
   }
@@ -48,7 +48,8 @@
       background-image: url("../images/fitsocialdemo.gif");
 
       @include respond(phone) {
-          margin-top: 7rem;
+          margin-top: 1rem;
+          height: 100%;
       }
     }
 
