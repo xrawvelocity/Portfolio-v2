@@ -11,10 +11,13 @@
     flex-direction: column;
     align-items: center;
     color: #eee;
-    margin: 5rem 0 0;
+    margin: 2rem 0 0;
+    width: 50%;
+    text-align: center;
 
     @include respond(phone) {
       margin: 4rem 0 0;
+      width: 80%;
     }
 
     &__title {
@@ -23,6 +26,7 @@
 
     &__paragraph {
       font-size: 3rem;
+      margin-top: 3rem;
     }
   }
 

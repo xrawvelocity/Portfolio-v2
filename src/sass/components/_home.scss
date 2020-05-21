@@ -87,6 +87,7 @@
     line-height: 1.6;
     @include respond(phone){
         width: 100%;
+        padding: 5rem 10%;
     }
 
     &-top {
@@ -116,6 +117,9 @@
         text-decoration: none;
         font-weight: 300;
         color: #f7f7f2;
+        @include respond(phone){
+            padding: 5rem 0 0 0;
+        }
       }
     }
   }

@@ -6,8 +6,13 @@ export default class Contact extends Component {
     return (
       <section class="contact" id="contact">
         <div class="contact-text">
-          <h1 class="contact-text__title">Want to work with me?</h1>
-          <p class="contact-text__paragraph">Feel free to reach out</p>
+          <h1 class="contact-text__title">
+            Let's build something great together.
+          </h1>
+          <p class="contact-text__paragraph">
+            If you'd like to start a new project, need help with an existing
+            project or have any other enquiry, please get in touch.{" "}
+          </p>
         </div>
 
         <div class="contact-links">

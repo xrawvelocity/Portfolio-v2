@@ -227,7 +227,8 @@ body::-webkit-scrollbar-thumb {
     line-height: 1.6; }
     @media only screen and (max-width: 44em) {
       .landing-heading {
-        width: 100%; } }
+        width: 100%;
+        padding: 5rem 10%; } }
     .landing-heading-top-title {
       font-size: 5rem;
       animation: moveInBottom 1s ease 0.75s;
@@ -261,6 +262,9 @@ body::-webkit-scrollbar-thumb {
         text-decoration: none;
         font-weight: 300;
         color: #f7f7f2; }
+        @media only screen and (max-width: 44em) {
+          .landing-heading-bottom, .landing-heading-bottom:link, .landing-heading-bottom:visited {
+            padding: 5rem 0 0 0; } }
 
 .star {
   position: absolute; }
@@ -686,7 +690,7 @@ body::-webkit-scrollbar-thumb {
   @media only screen and (max-width: 44em) {
     .work-popup {
       height: 100%;
-      padding: 40% 5%;
+      padding: 30% 5%;
       background-color: rgba(0, 0, 0, 0.9);
       display: flex;
       align-items: center;
@@ -699,7 +703,9 @@ body::-webkit-scrollbar-thumb {
     height: 100%; }
     @media only screen and (max-width: 44em) {
       .work-popup-content {
-        flex-direction: column; } }
+        flex-direction: column;
+        height: 90%;
+        padding: 3rem; } }
   .work-popup-demo {
     background-size: contain;
     width: 100%;
@@ -783,14 +789,18 @@ body::-webkit-scrollbar-thumb {
     flex-direction: column;
     align-items: center;
     color: #eee;
-    margin: 5rem 0 0; }
+    margin: 2rem 0 0;
+    width: 50%;
+    text-align: center; }
     @media only screen and (max-width: 44em) {
       .contact-text {
-        margin: 4rem 0 0; } }
+        margin: 4rem 0 0;
+        width: 80%; } }
     .contact-text__title {
       font-size: 4rem; }
     .contact-text__paragraph {
-      font-size: 3rem; }
+      font-size: 3rem;
+      margin-top: 3rem; }
   .contact-links {
     width: 60rem;
     display: flex;
@@ -950,7 +960,7 @@ body::-webkit-scrollbar-thumb {
     .about-skills-list {
       display: grid;
       grid-template-columns: repeat(auto-fill, 30vw);
-      margin: 3rem 5%;
+      margin: 3rem 10%;
       justify-content: center;
       width: 100%; }
       @media only screen and (max-width: 44em) {
