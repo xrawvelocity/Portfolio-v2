@@ -953,6 +953,9 @@ body::-webkit-scrollbar-thumb {
   .about-skills {
     display: flex;
     flex-direction: column; }
+    @media only screen and (max-width: 44em) {
+      .about-skills {
+        padding-bottom: 10rem; } }
     .about-skills-title {
       align-items: center;
       margin: 7rem auto 3rem;
@@ -973,9 +976,12 @@ body::-webkit-scrollbar-thumb {
         display: flex;
         align-items: center;
         margin: 2rem 0; }
+        @media only screen and (max-width: 44em) {
+          .about-skills-list-each {
+            font-size: 2.6rem; } }
         .about-skills-list-each-image {
-          height: 45px;
-          width: 45px;
+          height: 35px;
+          width: 35px;
           display: inline-block;
           margin-right: 1rem; }
           .about-skills-list-each-image-reactJS {

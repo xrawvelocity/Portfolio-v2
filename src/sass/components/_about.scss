@@ -27,6 +27,10 @@
     display: flex;
     flex-direction: column;
 
+    @include respond(phone){
+        padding-bottom: 10rem;
+    }
+
     &-title {
       align-items: center;
       margin: 7rem auto 3rem;
@@ -52,9 +56,13 @@
         align-items: center;
         margin: 2rem 0;
 
+        @include respond(phone){
+            font-size: 2.6rem;
+        }
+
         &-image {
-          height: 45px;
-          width: 45px;
+          height: 35px;
+          width: 35px;
           display: inline-block;
           margin-right: 1rem;
 
