@@ -377,7 +377,7 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   align-items: center;
   padding: 5rem;
-  animation: fadeIn .5s ease-out 0.75s;
+  animation: fadeIn .5s ease-out 0.5s;
   animation-fill-mode: backwards;
   overflow-y: visible !important; }
   .work-grid {
@@ -681,12 +681,13 @@ body::-webkit-scrollbar-thumb {
   padding: 12%;
   background-color: rgba(0, 0, 0, 0.2);
   animation: fadeIn 0.5s ease-out;
-  animation-fill-mode: backwards; }
+  animation-fill-mode: backwards;
+  backdrop-filter: blur(5px); }
   @media only screen and (max-width: 44em) {
     .work-popup {
       height: 100%;
       padding: 40% 5%;
-      background-color: rgba(0, 0, 0, 0.7);
+      background-color: rgba(0, 0, 0, 0.9);
       display: flex;
       align-items: center;
       justify-content: center; } }
@@ -775,7 +776,7 @@ body::-webkit-scrollbar-thumb {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  animation: fadeIn .5s ease-out 0.75s;
+  animation: fadeIn .5s ease-out 0.5s;
   animation-fill-mode: backwards; }
   .contact-text {
     display: flex;
@@ -863,8 +864,7 @@ body::-webkit-scrollbar-thumb {
     @media only screen and (max-width: 44em) {
       .contact-form {
         flex-direction: column;
-        margin: 10rem 15rem 0rem 5rem;
-        padding-bottom: 10rem; } }
+        margin: 10rem 15rem 0rem 5rem; } }
     .contact-form-col-1 {
       width: 40rem;
       display: flex;
@@ -893,7 +893,7 @@ body::-webkit-scrollbar-thumb {
         color: #eee;
         border: 1px solid #111;
         border-radius: 3px;
-        height: 20px;
+        height: 40px;
         padding: 1.5rem 2rem;
         font-size: 2.8rem; }
       .contact-form-group__textarea {
@@ -923,62 +923,104 @@ body::-webkit-scrollbar-thumb {
         color: #222;
         cursor: pointer; }
 
-.about-skills-list-image {
-  height: 50px;
-  width: 50px;
-  display: inline-block; }
-  .about-skills-list-image-react {
-    background-image: url("../images/logos/reactjslogo.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center; }
-  .about-skills-list-image-express {
-    background-image: url("../images/logos/expressjslogo.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center; }
-  .about-skills-list-image-sass {
-    background-image: url("../images/logos/sasslogo.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center; }
-  .about-skills-list-image-cheerio {
-    background-image: url("../images/logos/cheeriologo.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center; }
-  .about-skills-list-image-ajax {
-    background-image: url("../images/logos/ajaxlogo.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center; }
-  .about-skills-list-image-mongo {
-    background-image: url("../images/logos/mongodblogo.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center; }
-  .about-skills-list-image-firebase {
-    background-image: url("../images/logos/firebase.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: top; }
-  .about-skills-list-image-node {
-    background-image: url("../images/logos/nodejslogo.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center; }
-  .about-skills-list-image-redux {
-    background-image: url("../images/logos/reduxlogo.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center; }
-  .about-skills-list-image-html {
-    background-image: url("../images/logos/htmllogo.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center; }
-  .about-skills-list-image-js {
-    background-image: url("../images/logos/javascript.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center; }
+.about {
+  animation: fadeIn 0.5s ease-out 0.5s;
+  animation-fill-mode: backwards; }
+  .about-story {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%; }
+    .about-story-title {
+      margin: 2rem 0 5rem; }
+    .about-story-paragraph {
+      text-align: center;
+      width: 50%; }
+      @media only screen and (max-width: 44em) {
+        .about-story-paragraph {
+          width: 100%; } }
+  .about-skills {
+    display: flex;
+    flex-direction: column; }
+    .about-skills-title {
+      align-items: center;
+      margin: 7rem auto 3rem;
+      display: inline; }
+    .about-skills-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 30vw);
+      margin: 3rem 5%;
+      justify-content: center;
+      width: 100%; }
+      @media only screen and (max-width: 44em) {
+        .about-skills-list {
+          grid-template-columns: repeat(auto-fill, 45%);
+          padding: 3rem 0 0 5rem;
+          margin: 0;
+          overflow-x: hidden; } }
+      .about-skills-list-each {
+        display: flex;
+        align-items: center;
+        margin: 2rem 0; }
+        .about-skills-list-each-image {
+          height: 45px;
+          width: 45px;
+          display: inline-block;
+          margin-right: 1rem; }
+          .about-skills-list-each-image-reactJS {
+            background-image: url("../images/logos/reactjslogo.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center; }
+          .about-skills-list-each-image-expressJS {
+            background-image: url("../images/logos/expressjslogo.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: #fff; }
+          .about-skills-list-each-image-sass {
+            background-image: url("../images/logos/sasslogo.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center; }
+          .about-skills-list-each-image-cheerio {
+            background-image: url("../images/logos/cheeriologo.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center; }
+          .about-skills-list-each-image-ajax {
+            background-image: url("../images/logos/ajaxlogo.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center; }
+          .about-skills-list-each-image-mongoDB {
+            background-image: url("../images/logos/mongodblogo.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center; }
+          .about-skills-list-each-image-firebase {
+            background-image: url("../images/logos/firebase.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: top; }
+          .about-skills-list-each-image-nodeJS {
+            background-image: url("../images/logos/nodejslogo.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center; }
+          .about-skills-list-each-image-redux {
+            background-image: url("../images/logos/reduxlogo.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center; }
+          .about-skills-list-each-image-html {
+            background-image: url("../images/logos/htmllogo.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center; }
+          .about-skills-list-each-image-javascript {
+            background-image: url("../images/logos/javascript.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center; }
