@@ -18,7 +18,7 @@ export default class Contact extends Component {
             class="contact-links__linkedin"
           />
           <a
-            href="./files/VictorFernandezResume.pdf"
+            href="./files/VictorFernandezResume.docx"
             class="contact-links__resume"
             download
           >

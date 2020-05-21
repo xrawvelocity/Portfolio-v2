@@ -160,6 +160,9 @@ body::-webkit-scrollbar-thumb {
   color: #f7f7f2;
   font-weight: 500;
   font-size: 3rem; }
+  @media only screen and (max-width: 44em) {
+    .landing {
+      background-size: 200% 200%; } }
   .landing-top {
     display: flex;
     justify-content: space-between;
@@ -222,6 +225,9 @@ body::-webkit-scrollbar-thumb {
     width: 65%;
     padding: 15rem 10% 5rem;
     line-height: 1.6; }
+    @media only screen and (max-width: 44em) {
+      .landing-heading {
+        width: 100%; } }
     .landing-heading-top-title {
       font-size: 5rem;
       animation: moveInBottom 1s ease 0.75s;
@@ -296,6 +302,10 @@ body::-webkit-scrollbar-thumb {
   top: 60%;
   left: 75%;
   transform: rotateZ(45deg); }
+  @media only screen and (max-width: 44em) {
+    .shooting-star-container {
+      left: 10%;
+      top: 10%; } }
 
 .shooting-star {
   position: absolute;
@@ -612,7 +622,13 @@ body::-webkit-scrollbar-thumb {
         font-size: 2.6rem;
         margin: 5rem;
         transform: translateY(0);
-        transition: all .1s ease-out; }
+        transition: all .1s ease-out;
+        padding: .5rem 1rem; }
+        @media only screen and (max-width: 44em) {
+          .work-grid-card__btn {
+            padding: 1rem;
+            width: 50%;
+            margin: 5rem  auto; } }
         .work-grid-card__btn:hover {
           cursor: pointer;
           background-color: #ccc;
@@ -769,7 +785,7 @@ body::-webkit-scrollbar-thumb {
     margin: 5rem 0 0; }
     @media only screen and (max-width: 44em) {
       .contact-text {
-        margin: 25rem 0 0; } }
+        margin: 4rem 0 0; } }
     .contact-text__title {
       font-size: 4rem; }
     .contact-text__paragraph {
@@ -906,3 +922,63 @@ body::-webkit-scrollbar-thumb {
         background-color: #fff;
         color: #222;
         cursor: pointer; }
+
+.about-skills-list-image {
+  height: 50px;
+  width: 50px;
+  display: inline-block; }
+  .about-skills-list-image-react {
+    background-image: url("../images/logos/reactjslogo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .about-skills-list-image-express {
+    background-image: url("../images/logos/expressjslogo.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .about-skills-list-image-sass {
+    background-image: url("../images/logos/sasslogo.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .about-skills-list-image-cheerio {
+    background-image: url("../images/logos/cheeriologo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .about-skills-list-image-ajax {
+    background-image: url("../images/logos/ajaxlogo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .about-skills-list-image-mongo {
+    background-image: url("../images/logos/mongodblogo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .about-skills-list-image-firebase {
+    background-image: url("../images/logos/firebase.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top; }
+  .about-skills-list-image-node {
+    background-image: url("../images/logos/nodejslogo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .about-skills-list-image-redux {
+    background-image: url("../images/logos/reduxlogo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .about-skills-list-image-html {
+    background-image: url("../images/logos/htmllogo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .about-skills-list-image-js {
+    background-image: url("../images/logos/javascript.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; }

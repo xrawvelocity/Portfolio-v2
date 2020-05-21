@@ -9,6 +9,10 @@
   font-weight: 500;
   font-size: 3rem;
 
+  @include respond(phone) {
+      background-size: 200% 200%;
+  }
+
   &-top {
     display: flex;
     justify-content: space-between;
@@ -16,6 +20,8 @@
     padding: 10rem 10% 5rem;
     animation: moveInTop 1s ease 0.75s;
     animation-fill-mode: backwards;
+
+
 
     &-logo {
       font-family: "modernplate";
@@ -79,12 +85,16 @@
     width: 65%;
     padding: 15rem 10% 5rem;
     line-height: 1.6;
+    @include respond(phone){
+        width: 100%;
+    }
 
     &-top {
       &-title {
         font-size: 5rem;
         animation: moveInBottom 1s ease 0.75s;
         animation-fill-mode: backwards;
+        
       }
       &-subtitle {
         margin-top: 3rem;
@@ -157,6 +167,11 @@
   top: 60%;
   left: 75%;
   transform: rotateZ(45deg);
+
+  @include respond(phone) {
+      left: 10%;
+      top: 10%;
+  }
 }
 
 .shooting-star {
