@@ -31,7 +31,7 @@ export default class Home extends Component {
               brands, like yours.
             </p>
           </div>
-          <Link to="/about" className="landing-heading-bottom">
+          <Link onClick={()=>this.props.setSelected("about")}I to="/about" className="landing-heading-bottom">
             Learn More <FontAwesomeIcon icon={faChevronRight} />
           </Link>
         </div>

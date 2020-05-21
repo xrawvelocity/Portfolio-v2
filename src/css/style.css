@@ -150,7 +150,8 @@ body::-webkit-scrollbar-thumb {
   background-color: #222; }
 
 .landing {
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
   width: 100vw;
   background-size: 300% 300%;
   background-image: linear-gradient(45deg, #855988, #483475, #141852, #040724);
@@ -176,9 +177,9 @@ body::-webkit-scrollbar-thumb {
     .landing-top-nav {
       display: flex;
       font-size: 2.6rem; }
-      .landing-top-nav > * {
+      .landing-top-nav-link {
         margin-left: 4rem; }
-        .landing-top-nav > *::after {
+        .landing-top-nav-link::after {
           content: "";
           position: relative;
           display: block;
@@ -189,20 +190,34 @@ body::-webkit-scrollbar-thumb {
           transform-origin: 0%;
           transition: transform 300ms ease;
           top: 2px; }
-        .landing-top-nav > *:hover::after {
+        .landing-top-nav-link:hover::after {
           transform: scaleX(1); }
-        .landing-top-nav > *:hover {
+        .landing-top-nav-link:hover {
           cursor: pointer; }
-        .landing-top-nav > *, .landing-top-nav > *:link, .landing-top-nav > *:visited {
+        .landing-top-nav-link, .landing-top-nav-link:link, .landing-top-nav-link:visited {
           text-decoration: none;
           color: #f7f7f2; }
+        .landing-top-nav-link_selected, .landing-top-nav-link_selected:link, .landing-top-nav-link_selected:visited {
+          margin-left: 4rem;
+          text-decoration: none;
+          color: #f7f7f2; }
+          .landing-top-nav-link_selected::after, .landing-top-nav-link_selected:link::after, .landing-top-nav-link_selected:visited::after {
+            content: "";
+            position: relative;
+            display: block;
+            height: 3px;
+            width: 100%;
+            background-color: #fff;
+            transform: scaleX(1);
+            transform-origin: 0%;
+            top: 2px; }
   .landing-heading {
     font-family: "Ubuntu";
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    height: 70%;
+    height: 70vh;
     width: 65%;
     padding: 15rem 10% 5rem;
     line-height: 1.6; }
@@ -345,288 +360,291 @@ body::-webkit-scrollbar-thumb {
   height: 50vh;
   background-color: #04061a; }
 
-.work-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 350px);
-  justify-content: space-evenly;
-  width: 100%;
-  padding-top: 20rem; }
-  @media only screen and (max-width: 44em) {
-    .work-grid {
-      grid-template-columns: repeat(auto-fit, 300px);
-      width: 80%; } }
-  .work-grid-card {
-    perspective: 120rem;
-    -moz-perspective: 80rem;
-    position: relative;
-    height: 48rem;
-    margin: 5rem auto; }
-    .work-grid-card-container {
-      width: 350px; }
-      @media only screen and (max-width: 35em) {
-        .work-grid-card-container {
-          width: 100%; } }
-    .work-grid-card__side {
+.work {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+  animation: fadeIn .5s ease-out 0.75s;
+  animation-fill-mode: backwards; }
+  .work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 350px);
+    justify-content: space-evenly;
+    width: 100%;
+    padding-top: 2rem; }
+    @media only screen and (max-width: 44em) {
+      .work-grid {
+        grid-template-columns: repeat(auto-fit, 300px);
+        width: 80%; } }
+    .work-grid-card {
+      perspective: 120rem;
+      -moz-perspective: 80rem;
+      position: relative;
       height: 48rem;
-      transition: all 0.8s ease;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      backface-visibility: hidden;
-      border-radius: 4px;
-      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-      overflow: hidden; }
-      .work-grid-card__side--front {
-        background-color: #fff; }
-      .work-grid-card__side--back {
-        transform: rotateY(180deg); }
-        .work-grid-card__side--back-1 {
-          background-image: linear-gradient(120deg, rgba(0, 57, 82, 0.9), #042635); }
-        .work-grid-card__side--back-2 {
-          background-image: linear-gradient(120deg, rgba(51, 51, 51, 0.9), #333333); }
-        .work-grid-card__side--back-3 {
-          background-image: linear-gradient(120deg, rgba(5, 142, 151, 0.9), #09757b); }
-        .work-grid-card__side--back-4 {
-          background-image: linear-gradient(120deg, rgba(35, 35, 35, 0.9), #424342); }
-    .work-grid-card:hover .work-grid-card__side--front {
-      transform: rotateY(-180deg); }
-    .work-grid-card:hover .work-grid-card__side--back {
-      transform: rotateY(0deg); }
-    .work-grid-card__picture {
-      background-size: cover;
-      height: 19rem;
-      background-blend-mode: soft-light;
-      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
-      .work-grid-card__picture--1 {
-        background-image: linear-gradient(to right bottom, #003952, #042635), url("../images/tracktradebg.png"); }
-      .work-grid-card__picture--2 {
-        background-image: linear-gradient(to right bottom, rgba(119, 119, 119, 0.5), rgba(153, 153, 153, 0.5)), url("../images/livestylebg.png"); }
-      .work-grid-card__picture--3 {
-        background-image: linear-gradient(to right bottom, #777, #999), url("../images/officebg.jpg"); }
-      .work-grid-card__picture--4 {
-        background-image: linear-gradient(to right bottom, #777, #999), url("https://trello-backgrounds.s3.amazonaws.com/SharedBackground/2397x1600/5ee21529db5b4961f73e697ebe9e215d/photo-1574680096145-d05b474e2155.jpg"); }
-    .work-grid-card__heading {
-      font-size: 2.8rem;
-      font-weight: 300;
-      text-transform: uppercase;
-      text-align: right;
-      color: #fff;
-      position: absolute;
-      top: 12rem;
-      width: 100%;
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center; }
-      @media only screen and (max-width: 44em) {
-        .work-grid-card__heading {
-          top: 11rem;
-          font-size: 3.5rem; } }
-    .work-grid-card__heading-image {
-      display: inline-block;
-      background-size: contain;
-      background-repeat: no-repeat; }
-      .work-grid-card__heading-image--1 {
-        width: 150px;
-        height: 100px;
-        background-image: url("../images/laptop-bg-landing.png");
-        animation: float 3s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s infinite; }
-        @media only screen and (max-width: 44em) {
-          .work-grid-card__heading-image--1 {
-            width: 120px;
-            height: 80px; } }
-      .work-grid-card__heading-image--2 {
-        width: 100px;
-        height: 110px;
-        background-image: url("../images/sanspicBareLogo.svg"); }
-        @media only screen and (max-width: 44em) {
-          .work-grid-card__heading-image--2 {
-            width: 80px;
-            height: 90px; } }
-      .work-grid-card__heading-image--3 {
-        width: 100px;
-        height: 100px;
-        background-image: url("../images/newsupervisor.gif"); }
-        @media only screen and (max-width: 44em) {
-          .work-grid-card__heading-image--3 {
-            width: 80px;
-            height: 80px; } }
-      .work-grid-card__heading-image--4 {
-        width: 100px;
-        height: 100px;
-        background-image: url("../images/fitsociallogo.png"); }
-        @media only screen and (max-width: 44em) {
-          .work-grid-card__heading-image--4 {
-            width: 80px;
-            height: 80px; } }
-    .work-grid-card__heading-span {
-      padding: 0.5rem;
-      -webkit-box-decoration-break: clone;
-      box-decoration-break: clone;
-      text-align: right; }
-      .work-grid-card__heading-span--1 {
-        background-image: linear-gradient(to right bottom, rgba(0, 57, 82, 0.85), rgba(4, 38, 53, 0.85)); }
-      .work-grid-card__heading-span--2 {
-        background-image: linear-gradient(to right bottom, rgba(34, 34, 34, 0.85), rgba(17, 17, 17, 0.85)); }
-      .work-grid-card__heading-span--3 {
-        width: 50%;
-        background-image: linear-gradient(to right bottom, rgba(5, 142, 151, 0.85), rgba(9, 117, 123, 0.85)); }
-      .work-grid-card__heading-span--4 {
-        width: 50%;
-        background-image: linear-gradient(to right bottom, rgba(35, 35, 35, 0.85), rgba(66, 67, 66, 0.85)); }
-    .work-grid-card__details {
-      padding: 3rem; }
-      .work-grid-card__details ul {
-        list-style: none;
-        width: 80%;
-        margin: 0 auto; }
-        .work-grid-card__details ul li {
-          text-align: center;
-          font-size: 1.5rem;
-          padding: 1rem 1rem 1rem 3rem;
-          display: flex;
-          align-items: center;
-          justify-content: flex-end; }
-          @media only screen and (max-width: 90em) {
-            .work-grid-card__details ul li {
-              padding: 1rem 1rem 1rem 3rem; } }
-          @media only screen and (max-width: 65em) {
-            .work-grid-card__details ul li {
-              padding: 1rem 1rem 1rem 3rem; } }
-          @media only screen and (max-width: 44em) {
-            .work-grid-card__details ul li {
-              padding: 2rem 1rem 1rem 3rem;
-              font-size: 2rem; } }
-          .work-grid-card__details ul li:not(:last-child) {
-            border-bottom: 1px solid #eee; }
-          .work-grid-card__details ul li span {
-            padding-left: 3rem;
-            width: 20px;
-            height: 20px;
-            display: inline-block; }
-            @media only screen and (max-width: 44em) {
-              .work-grid-card__details ul li span {
-                padding-left: 7rem;
-                width: 25px;
-                height: 25px; } }
-      .work-grid-card__details-logo-react {
-        background-image: url("../images/logos/reactjslogo.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center; }
-      .work-grid-card__details-logo-express {
-        background-image: url("../images/logos/expressjslogo.svg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center; }
-      .work-grid-card__details-logo-sass {
-        background-image: url("../images/logos/sasslogo.svg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center; }
-      .work-grid-card__details-logo-cheerio {
-        background-image: url("../images/logos/cheeriologo.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center; }
-      .work-grid-card__details-logo-ajax {
-        background-image: url("../images/logos/ajaxlogo.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center; }
-      .work-grid-card__details-logo-mongo {
-        background-image: url("../images/logos/mongodblogo.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center; }
-      .work-grid-card__details-logo-firebase {
-        background-image: url("../images/logos/firebase.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: top; }
-      .work-grid-card__details-logo-node {
-        background-image: url("../images/logos/nodejslogo.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center; }
-      .work-grid-card__details-logo-redux {
-        background-image: url("../images/logos/reduxlogo.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center; }
-      .work-grid-card__details-logo-html {
-        background-image: url("../images/logos/htmllogo.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center; }
-      .work-grid-card__details-logo-phaser {
-        background-image: url("../images/logos/phaser3logo.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center; }
-      .work-grid-card__details-logo-tiled {
-        background-image: url("../images/logos/tiledmapeditorlogo.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center; }
-      .work-grid-card__details-logo-js {
-        background-image: url("../images/logos/javascript.svg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center; }
-      .work-grid-card__details-logo-ps {
-        background-image: url("../images/logos/photoshoplogo.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center; }
-    .work-grid-card__cta {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 90%;
-      transform: translate(-50%, -50%);
-      text-align: center; }
-    .work-grid-card__price-box {
-      margin-bottom: 8rem;
-      color: #fff; }
-    .work-grid-card__price-only {
-      font-size: 2rem;
-      text-transform: uppercase; }
-      @media only screen and (max-width: 44em) {
-        .work-grid-card__price-only {
-          padding: 0 3rem; } }
-    .work-grid-card__price-value {
-      font-size: 6rem;
-      font-weight: 200; }
-    @media only screen and (max-width: 56.25em), only screen and (hover: none) {
-      .work-grid-card {
-        height: auto;
+      margin: 5rem auto; }
+      .work-grid-card-container {
+        width: 350px; }
+        @media only screen and (max-width: 35em) {
+          .work-grid-card-container {
+            width: 100%; } }
+      .work-grid-card__side {
+        height: 48rem;
+        transition: all 0.8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
         border-radius: 4px;
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+        overflow: hidden; }
+        .work-grid-card__side--front {
+          background-color: #fff; }
+        .work-grid-card__side--back {
+          transform: rotateY(180deg); }
+          .work-grid-card__side--back-1 {
+            background-image: linear-gradient(120deg, rgba(51, 51, 51, 0.9), #333333); }
+          .work-grid-card__side--back-2 {
+            background-image: linear-gradient(120deg, rgba(51, 51, 51, 0.9), #333333); }
+          .work-grid-card__side--back-3 {
+            background-image: linear-gradient(120deg, rgba(5, 142, 151, 0.9), #09757b); }
+          .work-grid-card__side--back-4 {
+            background-image: linear-gradient(120deg, rgba(35, 35, 35, 0.9), #424342); }
+      .work-grid-card:hover .work-grid-card__side--front {
+        transform: rotateY(-180deg); }
+      .work-grid-card:hover .work-grid-card__side--back {
+        transform: rotateY(0deg); }
+      .work-grid-card__picture {
+        background-size: cover;
+        height: 19rem;
+        background-blend-mode: soft-light;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+        .work-grid-card__picture--1 {
+          background-image: linear-gradient(to right bottom, rgba(119, 119, 119, 0.5), rgba(153, 153, 153, 0.5)), url("../images/tracktradebg.png"); }
+        .work-grid-card__picture--2 {
+          background-image: linear-gradient(to right bottom, rgba(119, 119, 119, 0.5), rgba(153, 153, 153, 0.5)), url("../images/livestylebg.png"); }
+        .work-grid-card__picture--3 {
+          background-image: linear-gradient(to right bottom, #777, #999), url("../images/officebg.jpg"); }
+        .work-grid-card__picture--4 {
+          background-image: linear-gradient(to right bottom, #777, #999), url("https://trello-backgrounds.s3.amazonaws.com/SharedBackground/2397x1600/5ee21529db5b4961f73e697ebe9e215d/photo-1574680096145-d05b474e2155.jpg"); }
+      .work-grid-card__heading {
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: right;
+        color: #fff;
+        position: absolute;
+        top: 12rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center; }
+        @media only screen and (max-width: 44em) {
+          .work-grid-card__heading {
+            top: 11rem;
+            font-size: 3.5rem; } }
+      .work-grid-card__heading-image {
+        display: inline-block;
+        background-size: contain;
+        background-repeat: no-repeat; }
+        .work-grid-card__heading-image--1 {
+          width: 150px;
+          height: 100px;
+          background-image: url("../images/laptop-bg-landing.png"); }
+          @media only screen and (max-width: 44em) {
+            .work-grid-card__heading-image--1 {
+              width: 120px;
+              height: 80px; } }
+        .work-grid-card__heading-image--2 {
+          width: 100px;
+          height: 110px;
+          background-image: url("../images/sanspicBareLogo.svg"); }
+          @media only screen and (max-width: 44em) {
+            .work-grid-card__heading-image--2 {
+              width: 80px;
+              height: 90px; } }
+        .work-grid-card__heading-image--3 {
+          width: 100px;
+          height: 100px;
+          background-image: url("../images/newsupervisor.gif"); }
+          @media only screen and (max-width: 44em) {
+            .work-grid-card__heading-image--3 {
+              width: 80px;
+              height: 80px; } }
+        .work-grid-card__heading-image--4 {
+          width: 80px;
+          height: 80px;
+          background-image: url("../images/fitsociallogo.png"); }
+          @media only screen and (max-width: 44em) {
+            .work-grid-card__heading-image--4 {
+              width: 80px;
+              height: 80px; } }
+      .work-grid-card__heading-span {
+        padding: 0.5rem;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        text-align: right; }
+        .work-grid-card__heading-span--1 {
+          background-image: linear-gradient(to right bottom, rgba(0, 57, 82, 0.85), rgba(4, 38, 53, 0.85)); }
+        .work-grid-card__heading-span--2 {
+          background-image: linear-gradient(to right bottom, rgba(34, 34, 34, 0.85), rgba(17, 17, 17, 0.85)); }
+        .work-grid-card__heading-span--3 {
+          width: 50%;
+          background-image: linear-gradient(to right bottom, rgba(5, 142, 151, 0.85), rgba(9, 117, 123, 0.85)); }
+        .work-grid-card__heading-span--4 {
+          width: 50%;
+          background-image: linear-gradient(to right bottom, rgba(35, 35, 35, 0.85), rgba(66, 67, 66, 0.85)); }
+      .work-grid-card__details {
+        padding: 3rem; }
+        .work-grid-card__details ul {
+          list-style: none;
+          width: 80%;
+          margin: 0 auto; }
+          .work-grid-card__details ul li {
+            text-align: center;
+            font-size: 1.5rem;
+            padding: 1rem 1rem 1rem 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            color: #222; }
+            @media only screen and (max-width: 90em) {
+              .work-grid-card__details ul li {
+                padding: 1rem 1rem 1rem 3rem; } }
+            @media only screen and (max-width: 65em) {
+              .work-grid-card__details ul li {
+                padding: 1rem 1rem 1rem 3rem; } }
+            @media only screen and (max-width: 44em) {
+              .work-grid-card__details ul li {
+                padding: 2rem 1rem 1rem 3rem;
+                font-size: 2rem; } }
+            .work-grid-card__details ul li:not(:last-child) {
+              border-bottom: 1px solid #eee; }
+            .work-grid-card__details ul li span {
+              padding-left: 3rem;
+              width: 20px;
+              height: 20px;
+              display: inline-block; }
+              @media only screen and (max-width: 44em) {
+                .work-grid-card__details ul li span {
+                  padding-left: 7rem;
+                  width: 25px;
+                  height: 25px; } }
+        .work-grid-card__details-logo-react {
+          background-image: url("../images/logos/reactjslogo.png");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center; }
+        .work-grid-card__details-logo-express {
+          background-image: url("../images/logos/expressjslogo.svg");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center; }
+        .work-grid-card__details-logo-sass {
+          background-image: url("../images/logos/sasslogo.svg");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center; }
+        .work-grid-card__details-logo-cheerio {
+          background-image: url("../images/logos/cheeriologo.png");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center; }
+        .work-grid-card__details-logo-ajax {
+          background-image: url("../images/logos/ajaxlogo.png");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center; }
+        .work-grid-card__details-logo-mongo {
+          background-image: url("../images/logos/mongodblogo.png");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center; }
+        .work-grid-card__details-logo-firebase {
+          background-image: url("../images/logos/firebase.png");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: top; }
+        .work-grid-card__details-logo-node {
+          background-image: url("../images/logos/nodejslogo.png");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center; }
+        .work-grid-card__details-logo-redux {
+          background-image: url("../images/logos/reduxlogo.png");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center; }
+        .work-grid-card__details-logo-html {
+          background-image: url("../images/logos/htmllogo.png");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center; }
+        .work-grid-card__details-logo-js {
+          background-image: url("../images/logos/javascript.svg");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center; }
+      .work-grid-card__cta {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 90%;
+        transform: translate(-50%, -50%);
+        text-align: center; }
+      .work-grid-card__price-box {
+        margin-bottom: 8rem;
+        color: #fff; }
+      .work-grid-card__description {
+        font-size: 2rem;
+        text-transform: uppercase; }
+        @media only screen and (max-width: 44em) {
+          .work-grid-card__description {
+            padding: 0 3rem; } }
+      .work-grid-card__btn {
         background-color: #fff;
-        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
-        .work-grid-card__side {
+        color: #222;
+        font-size: 2.6rem;
+        margin: 5rem;
+        transform: translateY(0);
+        transition: all .1s ease-out; }
+        .work-grid-card__btn:hover {
+          cursor: pointer;
+          background-color: #ccc;
+          transform: translateY(-0.2rem); }
+        .work-grid-card__btn:active {
+          transform: translateY(0.1rem); }
+      @media only screen and (max-width: 56.25em), only screen and (hover: none) {
+        .work-grid-card {
           height: auto;
-          position: relative;
-          box-shadow: none; }
-          .work-grid-card__side--back {
-            transform: rotateY(0);
-            clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%); }
-        .work-grid-card:hover .work-grid-card__side--front {
-          transform: rotateY(0); }
-        .work-grid-card__details {
-          padding: 3rem; }
-        .work-grid-card__cta {
-          position: relative;
-          top: 0;
-          left: 0;
-          width: 100%;
-          transform: translate(0);
-          padding: 7rem 0rem 4rem; }
-        .work-grid-card__price-box {
-          margin-bottom: 3rem; }
-        .work-grid-card__price-only {
-          font-size: 2.3rem; } }
+          border-radius: 4px;
+          background-color: #fff;
+          box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+          .work-grid-card__side {
+            height: auto;
+            position: relative;
+            box-shadow: none; }
+            .work-grid-card__side--back {
+              transform: rotateY(0);
+              clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%); }
+          .work-grid-card:hover .work-grid-card__side--front {
+            transform: rotateY(0); }
+          .work-grid-card__details {
+            padding: 3rem; }
+          .work-grid-card__cta {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            transform: translate(0);
+            padding: 7rem 0rem 4rem; }
+          .work-grid-card__price-box {
+            margin-bottom: 3rem; }
+          .work-grid-card__price-only {
+            font-size: 2.3rem; } }
 
 @keyframes float {
   0% {
@@ -635,3 +653,63 @@ body::-webkit-scrollbar-thumb {
     transform: translatey(-15px); }
   100% {
     transform: translatey(0px); } }
+
+.work-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 12%;
+  background-color: rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s ease-out;
+  animation-fill-mode: backwards; }
+  .work-popup-content {
+    background-color: #222;
+    color: #ddd;
+    display: flex;
+    height: 100%; }
+  .work-popup-demo {
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center; }
+    .work-popup-demo_fitsocial {
+      background-image: url("../images/fitsocialdemo.gif"); }
+    .work-popup-demo_tracktrade {
+      background-image: url("../images/tracktradedemo.gif"); }
+    .work-popup-demo_livestyle {
+      background-image: url("../images/livestyledemo.gif"); }
+  .work-popup-info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 85%;
+    padding: 5% 3%; }
+    .work-popup-info-text {
+      text-align: center; }
+    .work-popup-info-btns {
+      display: flex;
+      justify-content: space-evenly;
+      width: 50%; }
+      .work-popup-info-btns > *, .work-popup-info-btns > *:link, .work-popup-info-btns > *:visited {
+        text-decoration: none;
+        background: #ddd;
+        color: #222;
+        border-radius: 2px;
+        padding: 0.5rem 1rem;
+        transition: all 0.2s ease-out; }
+        .work-popup-info-btns > *:hover, .work-popup-info-btns > *:link:hover, .work-popup-info-btns > *:visited:hover {
+          cursor: pointer;
+          background-color: #fff; }
+    .work-popup-info-close {
+      position: absolute;
+      top: 15px;
+      right: 25px;
+      transition: all 0.2s ease-out; }
+      .work-popup-info-close:hover {
+        color: #d11;
+        cursor: pointer; }

@@ -1,171 +1,256 @@
 import React, { Component } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 export default class Work extends Component {
+  state = {
+    popup: "",
+  };
   render() {
     return (
       <section className="work">
-        <div className="work-title">My Work</div>
         <div className="work-grid">
-          <div class="work-grid-card-container" id="projects4">
-            <div class="work-grid-card">
-              <div class="work-grid-card__side work-grid-card__side--front">
-                <div class="work-grid-card__picture work-grid-card__picture--4">
+          <div className="work-grid-card-container">
+            <div className="work-grid-card">
+              <div className="work-grid-card__side work-grid-card__side--front">
+                <div className="work-grid-card__picture work-grid-card__picture--4">
                   &nbsp;
                 </div>
-                <h4 class="work-grid-card__heading">
-                  <span class="work-grid-card__heading-image work-grid-card__heading-image--4"></span>
-                  <span class="work-grid-card__heading-span work-grid-card__heading-span--4">
+                <h4 className="work-grid-card__heading">
+                  <span className="work-grid-card__heading-image work-grid-card__heading-image--4"></span>
+                  <span className="work-grid-card__heading-span work-grid-card__heading-span--4">
                     fitsocial
                   </span>
                 </h4>
-                <div class="work-grid-card__details">
+                <div className="work-grid-card__details">
                   <ul>
                     <li>
                       React.js{" "}
-                      <span class="work-grid-card__details-logo-react"></span>
+                      <span className="work-grid-card__details-logo-react"></span>
                     </li>
                     <li>
                       Redux{" "}
-                      <span class="work-grid-card__details-logo-redux"></span>
+                      <span className="work-grid-card__details-logo-redux"></span>
                     </li>
                     <li>
                       Node.js{" "}
-                      <span class="work-grid-card__details-logo-node"></span>
+                      <span className="work-grid-card__details-logo-node"></span>
                     </li>
                     <li>
                       Express.js{" "}
-                      <span class="work-grid-card__details-logo-express"></span>
+                      <span className="work-grid-card__details-logo-express"></span>
                     </li>
                     <li>
                       Firebase{" "}
-                      <span class="work-grid-card__details-logo-firebase"></span>
+                      <span className="work-grid-card__details-logo-firebase"></span>
                     </li>
                   </ul>
                 </div>
               </div>
-              <div class="work-grid-card__side work-grid-card__side--back work-grid-card__side--back-4">
-                <div class="work-grid-card__cta">
-                  <div class="work-grid-card__price-box">
-                    <p class="work-grid-card__price-only">
-                      Social Media for exercise enthusiasts who want to keep
-                      each other accountable
-                    </p>
-                  </div>
-                  <a href="#popup4" id="bookBtn" class="btn btn--white">
+              <div className="work-grid-card__side work-grid-card__side--back work-grid-card__side--back-4">
+                <div className="work-grid-card__cta">
+                  <p className="work-grid-card__description">
+                    Social Media for exercise enthusiasts. Features instant
+                    messaging, notifications, and more.
+                  </p>
+                  <div
+                    onClick={() => {
+                      this.setState({ popup: "fitsocial" });
+                    }}
+                    className="work-grid-card__btn"
+                  >
                     More Info
-                  </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="work-grid-card-container" id="projects1">
-            <div class="work-grid-card">
-              <div class="work-grid-card__side work-grid-card__side--front">
-                <div class="work-grid-card__picture work-grid-card__picture--1">
+          <div className="work-grid-card-container">
+            <div className="work-grid-card">
+              <div className="work-grid-card__side work-grid-card__side--front">
+                <div className="work-grid-card__picture work-grid-card__picture--1">
                   &nbsp;
                 </div>
-                <h4 class="work-grid-card__heading">
-                  <span class="work-grid-card__heading-image work-grid-card__heading-image--1"></span>
-                  <span class="work-grid-card__heading-span work-grid-card__heading-span--1">
+                <h4 className="work-grid-card__heading">
+                  <span className="work-grid-card__heading-image work-grid-card__heading-image--1"></span>
+                  <span className="work-grid-card__heading-span work-grid-card__heading-span--1">
                     Track Trade
                   </span>
                 </h4>
-                <div class="work-grid-card__details">
+                <div className="work-grid-card__details">
                   <ul>
                     <li>
                       React.js{" "}
-                      <span class="work-grid-card__details-logo-react"></span>
+                      <span className="work-grid-card__details-logo-react"></span>
                     </li>
                     <li>
                       Redux{" "}
-                      <span class="work-grid-card__details-logo-redux"></span>
+                      <span className="work-grid-card__details-logo-redux"></span>
                     </li>
                     <li>
                       Node.js{" "}
-                      <span class="work-grid-card__details-logo-node"></span>
+                      <span className="work-grid-card__details-logo-node"></span>
                     </li>
                     <li>
                       Express.js{" "}
-                      <span class="work-grid-card__details-logo-express"></span>
+                      <span className="work-grid-card__details-logo-express"></span>
                     </li>
                     <li>
                       MongoDB{" "}
-                      <span class="work-grid-card__details-logo-mongo"></span>
+                      <span className="work-grid-card__details-logo-mongo"></span>
                     </li>
                   </ul>
                 </div>
               </div>
-              <div class="work-grid-card__side work-grid-card__side--back work-grid-card__side--back-1">
-                <div class="work-grid-card__cta">
-                  <div class="work-grid-card__price-box">
-                    <p class="work-grid-card__price-only">
-                      Social media for Foreign Exchange Traders that allows
-                      users to visualize their performance using charts.
-                    </p>
-                  </div>
-                  <a href="#popup" id="bookBtn" class="btn btn--white">
+              <div className="work-grid-card__side work-grid-card__side--back work-grid-card__side--back-1">
+                <div className="work-grid-card__cta">
+                  <p className="work-grid-card__description">
+                    Social media for Foreign Exchange Traders that allows users
+                    to visualize their performance using charts.
+                  </p>
+                  <div
+                    onClick={() => {
+                      this.setState({ popup: "tracktrade" });
+                    }}
+                    className="work-grid-card__btn"
+                  >
                     More Info
-                  </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="work-grid-card-container" id="projects2">
-            <div class="work-grid-card">
-              <div class="work-grid-card__side work-grid-card__side--front">
-                <div class="work-grid-card__picture work-grid-card__picture--2">
+          <div className="work-grid-card-container">
+            <div className="work-grid-card">
+              <div className="work-grid-card__side work-grid-card__side--front">
+                <div className="work-grid-card__picture work-grid-card__picture--2">
                   &nbsp;
                 </div>
-                <h4 class="work-grid-card__heading">
-                  <span class="work-grid-card__heading-image work-grid-card__heading-image--2"></span>
-                  <span class="work-grid-card__heading-span work-grid-card__heading-span--2">
+                <h4 className="work-grid-card__heading">
+                  <span className="work-grid-card__heading-image work-grid-card__heading-image--2"></span>
+                  <span className="work-grid-card__heading-span work-grid-card__heading-span--2">
                     Live Style
                   </span>
                 </h4>
-                <div class="work-grid-card__details">
+                <div className="work-grid-card__details">
                   <ul>
                     <li>
                       React.js{" "}
-                      <span class="work-grid-card__details-logo-react"></span>
+                      <span className="work-grid-card__details-logo-react"></span>
                     </li>
                     <li>
                       Express.js{" "}
-                      <span class="work-grid-card__details-logo-express"></span>
+                      <span className="work-grid-card__details-logo-express"></span>
                     </li>
                     <li>
                       SASS{" "}
-                      <span class="work-grid-card__details-logo-sass"></span>
+                      <span className="work-grid-card__details-logo-sass"></span>
                     </li>
                     <li>
                       Cheerio{" "}
-                      <span class="work-grid-card__details-logo-cheerio"></span>
+                      <span className="work-grid-card__details-logo-cheerio"></span>
                     </li>
                     <li>
                       AJAX{" "}
-                      <span class="work-grid-card__details-logo-ajax"></span>
+                      <span className="work-grid-card__details-logo-ajax"></span>
                     </li>
                   </ul>
                 </div>
               </div>
-              <div class="work-grid-card__side work-grid-card__side--back work-grid-card__side--back-2">
-                <div class="work-grid-card__cta">
-                  <div class="work-grid-card__price-box">
-                    <p class="work-grid-card__price-only">
-                      Single-page web app built with React. Uses custom Amazon
-                      Web Scrape and YouTube API to recommend specific videos
-                      and products to the users.
-                    </p>
-                  </div>
-                  <a href="#popup2" id="bookBtn" class="btn btn--white">
+              <div className="work-grid-card__side work-grid-card__side--back work-grid-card__side--back-2">
+                <div className="work-grid-card__cta">
+                  <p className="work-grid-card__description">
+                    Single-page web app built with React. Uses custom Amazon Web
+                    Scrape and YouTube API to recommend specific videos and
+                    products to the users.
+                  </p>
+                  <div
+                    onClick={() => {
+                      this.setState({ popup: "livestyle" });
+                    }}
+                    className="work-grid-card__btn"
+                  >
                     More Info
-                  </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        {this.state.popup === "fitsocial" ? (
+          <div className="work-popup">
+            <div className="work-popup-content">
+              <div className="work-popup-demo work-popup-demo_fitsocial"></div>
+              <div className="work-popup-info">
+                <FontAwesomeIcon
+                  onClick={() => {
+                    this.setState({ popup: "" });
+                  }}
+                  icon={faTimes}
+                  className="work-popup-info-close"
+                />
+                <div className="work-popup-info-text">
+                  This project taught me a lot about Firebase's realtime
+                  database and handling the global state using Redux.
+                </div>
+                <div className="work-popup-info-btns">
+                  <a href="https://fitsocial.netlify.app" target="_blank" rel="noopener noreferrer" className="work-popup-info-btns_demo">Demo</a>
+                  <a href="https://github.com/xrawvelocity/Workout-Challenge-v2-Frontend" target="_blank" rel="noopener noreferrer" className="work-popup-info-btns_code">Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        ) : null}
+        {this.state.popup === "tracktrade" ? (
+          <div className="work-popup">
+            <div className="work-popup-content">
+              <div className="work-popup-demo work-popup-demo_tracktrade"></div>
+              <div className="work-popup-info">
+                <FontAwesomeIcon
+                  onClick={() => {
+                    this.setState({ popup: "" });
+                  }}
+                  icon={faTimes}
+                  className="work-popup-info-close"
+                />
+                <div className="work-popup-info-text">
+                  This project taught me about authentication, creating,
+                  reading, updating, and deleting data from databases.
+                </div>
+                <div className="work-popup-info-btns">
+                  <a href="https://tracktrade.co" target="_blank" rel="noopener noreferrer" className="work-popup-info-btns_demo">Demo</a>
+                  <a href="https://github.com/TrackTraders/TrackTrade" target="_blank" rel="noopener noreferrer" className="work-popup-info-btns_code">Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        ) : null}
+        {this.state.popup === "livestyle" ? (
+          <div className="work-popup">
+            <div className="work-popup-content">
+              <div className="work-popup-demo work-popup-demo_livestyle"></div>
+              <div className="work-popup-info">
+                <FontAwesomeIcon
+                  onClick={() => {
+                    this.setState({ popup: "" });
+                  }}
+                  icon={faTimes}
+                  className="work-popup-info-close"
+                />
+                <div className="work-popup-info-text">
+                  This project taught me about fetching data from APIs and Web
+                  Scraping.
+                </div>
+                <div className="work-popup-info-btns">
+                  <a href="https://livestyle.netlify.com" target="_blank" rel="noopener noreferrer" className="work-popup-info-btns_demo">Demo</a>
+                  <a href="https://github.com/xrawvelocity/LiveStyle" target="_blank" rel="noopener noreferrer" className="work-popup-info-btns_code">Code</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        ) : null}
       </section>
     );
   }

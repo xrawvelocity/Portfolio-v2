@@ -1,13 +1,18 @@
 .work {
-  &-title {
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem ;
+  animation: fadeIn .5s ease-out 0.75s;
+  animation-fill-mode: backwards;
 
   &-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, 350px);
     justify-content: space-evenly;
     width: 100%;
-    padding-top: 20rem;
+    padding-top: 2rem;
 
     @include respond(phone) {
       grid-template-columns: repeat(auto-fit, 300px);
@@ -50,8 +55,8 @@
           &-1 {
             background-image: linear-gradient(
               120deg,
-              rgba($color-secondary-light, 0.9),
-              rgba($color-secondary-dark, 1)
+              rgba($color-gray-dark-3, 0.9),
+              rgba($color-gray-dark-3, 1)
             );
           }
 
@@ -98,8 +103,8 @@
         &--1 {
           background-image: linear-gradient(
               to right bottom,
-              $color-secondary-light,
-              $color-secondary-dark
+              rgba($color-gray-dark, 0.5),
+              rgba($color-gray-dark-2, 0.5)
             ),
             url("../images/tracktradebg.png");
         }
@@ -158,7 +163,7 @@
           width: 150px;
           height: 100px;
           background-image: url("../images/laptop-bg-landing.png");
-          animation: float 3s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s infinite;
+          //   animation: float 3s cubic-bezier(0.645, 0.045, 0.355, 1) 0.1s infinite;
 
           @include respond(phone) {
             width: 120px;
@@ -186,8 +191,8 @@
           }
         }
         &--4 {
-          width: 100px;
-          height: 100px;
+          width: 80px;
+          height: 80px;
           background-image: url("../images/fitsociallogo.png");
 
           @include respond(phone) {
@@ -249,6 +254,7 @@
             display: flex;
             align-items: center;
             justify-content: flex-end;
+            color: #222;
 
             @include respond(tab-land) {
               padding: 1rem 1rem 1rem 3rem;
@@ -353,29 +359,8 @@
             background-position: center;
           }
 
-          &-phaser {
-            background-image: url("../images/logos/phaser3logo.png");
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-          }
-
-          &-tiled {
-            background-image: url("../images/logos/tiledmapeditorlogo.png");
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-          }
-
           &-js {
             background-image: url("../images/logos/javascript.svg");
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-          }
-
-          &-ps {
-            background-image: url("../images/logos/photoshoplogo.png");
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
@@ -399,7 +384,7 @@
         color: $color-white;
       }
 
-      &__price-only {
+      &__description {
         font-size: 2rem;
         text-transform: uppercase;
 
@@ -408,9 +393,22 @@
         }
       }
 
-      &__price-value {
-        font-size: 6rem;
-        font-weight: 200;
+      &__btn {
+          background-color: #fff;
+          color: #222; 
+          font-size: 2.6rem;
+          margin: 5rem;
+          transform: translateY(0);
+          transition: all .1s ease-out;
+
+          &:hover {
+            cursor: pointer;
+            background-color: #ccc;
+            transform: translateY(-.2rem);
+          }
+          &:active {
+            transform: translateY(.1rem);
+          }
       }
 
       @media only screen and (max-width: 56.25em),
