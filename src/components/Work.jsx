@@ -183,21 +183,35 @@ export default class Work extends Component {
           <div className="work-popup">
             <div className="work-popup-content">
               <div className="work-popup-demo work-popup-demo_fitsocial"></div>
+              <FontAwesomeIcon
+                onClick={() => {
+                  this.setState({ popup: "" });
+                }}
+                icon={faTimes}
+                className="work-popup-info-close"
+              />
               <div className="work-popup-info">
-                <FontAwesomeIcon
-                  onClick={() => {
-                    this.setState({ popup: "" });
-                  }}
-                  icon={faTimes}
-                  className="work-popup-info-close"
-                />
                 <div className="work-popup-info-text">
                   This project taught me a lot about Firebase's realtime
                   database and handling the global state using Redux.
                 </div>
                 <div className="work-popup-info-btns">
-                  <a href="https://fitsocial.netlify.app" target="_blank" rel="noopener noreferrer" className="work-popup-info-btns_demo">Demo</a>
-                  <a href="https://github.com/xrawvelocity/Workout-Challenge-v2-Frontend" target="_blank" rel="noopener noreferrer" className="work-popup-info-btns_code">Code</a>
+                  <a
+                    href="https://fitsocial.netlify.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="work-popup-info-btns_demo"
+                  >
+                    Demo
+                  </a>
+                  <a
+                    href="https://github.com/xrawvelocity/Workout-Challenge-v2-Frontend"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="work-popup-info-btns_code"
+                  >
+                    Code
+                  </a>
                 </div>
               </div>
             </div>
@@ -220,8 +234,22 @@ export default class Work extends Component {
                   reading, updating, and deleting data from databases.
                 </div>
                 <div className="work-popup-info-btns">
-                  <a href="https://tracktrade.co" target="_blank" rel="noopener noreferrer" className="work-popup-info-btns_demo">Demo</a>
-                  <a href="https://github.com/TrackTraders/TrackTrade" target="_blank" rel="noopener noreferrer" className="work-popup-info-btns_code">Code</a>
+                  <a
+                    href="https://tracktrade.co"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="work-popup-info-btns_demo"
+                  >
+                    Demo
+                  </a>
+                  <a
+                    href="https://github.com/TrackTraders/TrackTrade"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="work-popup-info-btns_code"
+                  >
+                    Code
+                  </a>
                 </div>
               </div>
             </div>
@@ -244,8 +272,22 @@ export default class Work extends Component {
                   Scraping.
                 </div>
                 <div className="work-popup-info-btns">
-                  <a href="https://livestyle.netlify.com" target="_blank" rel="noopener noreferrer" className="work-popup-info-btns_demo">Demo</a>
-                  <a href="https://github.com/xrawvelocity/LiveStyle" target="_blank" rel="noopener noreferrer" className="work-popup-info-btns_code">Code</a>
+                  <a
+                    href="https://livestyle.netlify.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="work-popup-info-btns_demo"
+                  >
+                    Demo
+                  </a>
+                  <a
+                    href="https://github.com/xrawvelocity/LiveStyle"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="work-popup-info-btns_code"
+                  >
+                    Code
+                  </a>
                 </div>
               </div>
             </div>

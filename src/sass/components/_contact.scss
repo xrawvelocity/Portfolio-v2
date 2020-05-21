@@ -1,0 +1,212 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn .5s ease-out 0.75s;
+  animation-fill-mode: backwards;
+
+  &-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #eee;
+    margin: 5rem 0 0;
+
+    @include respond(phone) {
+      margin: 25rem 0 0;
+    }
+
+    &__title {
+      font-size: 4rem;
+    }
+
+    &__paragraph {
+      font-size: 3rem;
+    }
+  }
+
+  &-links {
+    width: 60rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: -10rem;
+
+    @include respond(phone) {
+      width: 55rem;
+    }
+
+    &__linkedin {
+      &,
+      &:link,
+      &:visited {
+        width: 50px;
+        height: 50px;
+        background-image: url("../images/logos/linkedinlogo.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: all 0.1s ease-in-out;
+
+        @include respond(phone) {
+          width: 35px;
+          height: 35px;
+        }
+      }
+      &:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+      }
+      &::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+    }
+
+    &__resume {
+      &,
+      &:link,
+      &:visited {
+        background-color: #ddd;
+        color: #111;
+        font-size: 2.2rem;
+        border: 1px solid #111;
+        text-decoration: none;
+        border-radius: 3px;
+        padding: 1rem 1.5rem;
+        text-transform: uppercase;
+        margin: 5rem 0;
+        align-self: flex-end;
+        transition: all 0.2s ease-out;
+      }
+
+      &:hover {
+        background-color: #fff;
+        color: #222;
+        cursor: pointer;
+      }
+    }
+
+    &__github {
+      &,
+      &:link,
+      &:visited {
+        width: 55px;
+        height: 55px;
+        background-image: url("../images/logos/githublogo.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: all 0.1s ease-in-out;
+
+        @include respond(phone) {
+          width: 35px;
+          height: 35px;
+        }
+      }
+      &:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+      }
+
+      &::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+    }
+  }
+
+  &-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    margin: 12rem 15rem 12rem 5rem;
+    font-size: 2.6rem;
+
+    @include respond(phone) {
+      flex-direction: column;
+      margin: 10rem 15rem 0rem 5rem;
+      padding-bottom: 10rem;
+    }
+
+    &-col {
+      &-1 {
+        width: 40rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10rem;
+      }
+      &-2 {
+        width: 40rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0rem;
+        margin-left: 10rem;
+      }
+    }
+
+    &-group {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      &__label {
+        margin: 3rem 0 1rem;
+        align-self: start;
+        color: #eee;
+      }
+
+      &__input {
+        background-color: #333;
+        color: #eee;
+        border: 1px solid #111;
+        border-radius: 3px;
+        height: 20px;
+        padding: 1.5rem 2rem;
+        font-size: 2.8rem;
+      }
+
+      &__textarea {
+        background-color: #333;
+        color: #eee;
+        border: 1px solid #111;
+        border-radius: 3px;
+        height: 185px;
+        padding: 1.5rem 2rem;
+        font-size: 2.8rem;
+
+        @include respond(phone) {
+          height: 100px;
+        }
+      }
+    }
+
+    &-button {
+      background-color: #ddd;
+      color: #111;
+      font-size: 3rem;
+      border: 1px solid #111;
+      border-radius: 3px;
+      padding: 1rem 1.5rem;
+      text-transform: uppercase;
+      margin-top: 3rem;
+      align-self: flex-end;
+      transition: all 0.2s ease-out;
+
+      &:hover {
+        background-color: #fff;
+        color: #222;
+        cursor: pointer;
+      }
+    }
+  }
+}

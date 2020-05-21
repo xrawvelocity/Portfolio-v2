@@ -30,7 +30,7 @@ html {
   font-size: 62.5%;
   background-color: #000;
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  overflow: hidden;
 
   @include respond(normal-desktop) {
     //width < 1600px
@@ -39,6 +39,7 @@ html {
   @include respond(tab-land) {
     //width < 1440px
     font-size: 56.25%;
+    overflow-y: visible !important;
   }
   @include respond(tab-port) {
     //width < 1040px

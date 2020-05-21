@@ -99,13 +99,14 @@ html {
   font-size: 62.5%;
   background-color: #000;
   scroll-behavior: smooth;
-  overflow-x: hidden; }
+  overflow: hidden; }
   @media only screen and (max-width: 100em) {
     html {
       font-size: 60%; } }
   @media only screen and (max-width: 90em) {
     html {
-      font-size: 56.25%; } }
+      font-size: 56.25%;
+      overflow-y: visible !important; } }
   @media only screen and (max-width: 65em) {
     html {
       font-size: 50%; } }
@@ -367,7 +368,8 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   padding: 5rem;
   animation: fadeIn .5s ease-out 0.75s;
-  animation-fill-mode: backwards; }
+  animation-fill-mode: backwards;
+  overflow-y: visible !important; }
   .work-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, 350px);
@@ -664,37 +666,64 @@ body::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.2);
   animation: fadeIn 0.5s ease-out;
   animation-fill-mode: backwards; }
+  @media only screen and (max-width: 44em) {
+    .work-popup {
+      height: 100%;
+      padding: 40% 5%;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center; } }
   .work-popup-content {
+    position: relative;
     background-color: #222;
     color: #ddd;
     display: flex;
     height: 100%; }
+    @media only screen and (max-width: 44em) {
+      .work-popup-content {
+        flex-direction: column; } }
   .work-popup-demo {
     background-size: contain;
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
     background-position: center; }
+    @media only screen and (max-width: 44em) {
+      .work-popup-demo {
+        height: 60%; } }
     .work-popup-demo_fitsocial {
       background-image: url("../images/fitsocialdemo.gif"); }
+      @media only screen and (max-width: 44em) {
+        .work-popup-demo_fitsocial {
+          margin-top: 7rem; } }
     .work-popup-demo_tracktrade {
       background-image: url("../images/tracktradedemo.gif"); }
     .work-popup-demo_livestyle {
       background-image: url("../images/livestyledemo.gif"); }
   .work-popup-info {
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     width: 85%;
     padding: 5% 3%; }
+    @media only screen and (max-width: 44em) {
+      .work-popup-info {
+        justify-content: space-around;
+        width: 100%;
+        padding: 5%; } }
     .work-popup-info-text {
       text-align: center; }
     .work-popup-info-btns {
       display: flex;
       justify-content: space-evenly;
       width: 50%; }
+      @media only screen and (max-width: 44em) {
+        .work-popup-info-btns {
+          justify-content: center;
+          width: 100%;
+          margin-top: 3rem; } }
       .work-popup-info-btns > *, .work-popup-info-btns > *:link, .work-popup-info-btns > *:visited {
         text-decoration: none;
         background: #ddd;
@@ -705,6 +734,12 @@ body::-webkit-scrollbar-thumb {
         .work-popup-info-btns > *:hover, .work-popup-info-btns > *:link:hover, .work-popup-info-btns > *:visited:hover {
           cursor: pointer;
           background-color: #fff; }
+      @media only screen and (max-width: 44em) {
+        .work-popup-info-btns_demo {
+          margin-right: 1rem; } }
+      @media only screen and (max-width: 44em) {
+        .work-popup-info-btns_code {
+          margin-left: 1rem; } }
     .work-popup-info-close {
       position: absolute;
       top: 15px;
@@ -712,4 +747,162 @@ body::-webkit-scrollbar-thumb {
       transition: all 0.2s ease-out; }
       .work-popup-info-close:hover {
         color: #d11;
+        cursor: pointer; }
+      @media only screen and (max-width: 44em) {
+        .work-popup-info-close {
+          color: #d11; }
+          .work-popup-info-close:hover {
+            color: #ddd; } }
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn .5s ease-out 0.75s;
+  animation-fill-mode: backwards; }
+  .contact-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #eee;
+    margin: 5rem 0 0; }
+    @media only screen and (max-width: 44em) {
+      .contact-text {
+        margin: 25rem 0 0; } }
+    .contact-text__title {
+      font-size: 4rem; }
+    .contact-text__paragraph {
+      font-size: 3rem; }
+  .contact-links {
+    width: 60rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: -10rem; }
+    @media only screen and (max-width: 44em) {
+      .contact-links {
+        width: 55rem; } }
+    .contact-links__linkedin, .contact-links__linkedin:link, .contact-links__linkedin:visited {
+      width: 50px;
+      height: 50px;
+      background-image: url("../images/logos/linkedinlogo.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: all 0.1s ease-in-out; }
+      @media only screen and (max-width: 44em) {
+        .contact-links__linkedin, .contact-links__linkedin:link, .contact-links__linkedin:visited {
+          width: 35px;
+          height: 35px; } }
+    .contact-links__linkedin:hover {
+      transform: scale(1.1);
+      cursor: pointer; }
+    .contact-links__linkedin::after {
+      content: "";
+      display: table;
+      clear: both; }
+    .contact-links__resume, .contact-links__resume:link, .contact-links__resume:visited {
+      background-color: #ddd;
+      color: #111;
+      font-size: 2.2rem;
+      border: 1px solid #111;
+      text-decoration: none;
+      border-radius: 3px;
+      padding: 1rem 1.5rem;
+      text-transform: uppercase;
+      margin: 5rem 0;
+      align-self: flex-end;
+      transition: all 0.2s ease-out; }
+    .contact-links__resume:hover {
+      background-color: #fff;
+      color: #222;
+      cursor: pointer; }
+    .contact-links__github, .contact-links__github:link, .contact-links__github:visited {
+      width: 55px;
+      height: 55px;
+      background-image: url("../images/logos/githublogo.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: all 0.1s ease-in-out; }
+      @media only screen and (max-width: 44em) {
+        .contact-links__github, .contact-links__github:link, .contact-links__github:visited {
+          width: 35px;
+          height: 35px; } }
+    .contact-links__github:hover {
+      transform: scale(1.1);
+      cursor: pointer; }
+    .contact-links__github::after {
+      content: "";
+      display: table;
+      clear: both; }
+  .contact-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 12rem 15rem 12rem 5rem;
+    font-size: 2.6rem; }
+    @media only screen and (max-width: 44em) {
+      .contact-form {
+        flex-direction: column;
+        margin: 10rem 15rem 0rem 5rem;
+        padding-bottom: 10rem; } }
+    .contact-form-col-1 {
+      width: 40rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-left: 10rem; }
+    .contact-form-col-2 {
+      width: 40rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 0rem;
+      margin-left: 10rem; }
+    .contact-form-group {
+      width: 100%;
+      display: flex;
+      flex-direction: column; }
+      .contact-form-group__label {
+        margin: 3rem 0 1rem;
+        align-self: start;
+        color: #eee; }
+      .contact-form-group__input {
+        background-color: #333;
+        color: #eee;
+        border: 1px solid #111;
+        border-radius: 3px;
+        height: 20px;
+        padding: 1.5rem 2rem;
+        font-size: 2.8rem; }
+      .contact-form-group__textarea {
+        background-color: #333;
+        color: #eee;
+        border: 1px solid #111;
+        border-radius: 3px;
+        height: 185px;
+        padding: 1.5rem 2rem;
+        font-size: 2.8rem; }
+        @media only screen and (max-width: 44em) {
+          .contact-form-group__textarea {
+            height: 100px; } }
+    .contact-form-button {
+      background-color: #ddd;
+      color: #111;
+      font-size: 3rem;
+      border: 1px solid #111;
+      border-radius: 3px;
+      padding: 1rem 1.5rem;
+      text-transform: uppercase;
+      margin-top: 3rem;
+      align-self: flex-end;
+      transition: all 0.2s ease-out; }
+      .contact-form-button:hover {
+        background-color: #fff;
+        color: #222;
         cursor: pointer; }
