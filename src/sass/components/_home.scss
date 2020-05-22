@@ -118,7 +118,7 @@
         font-weight: 300;
         color: #f7f7f2;
         @include respond(phone){
-            padding: 5rem 0 0 0;
+            padding: 5rem 0;
         }
       }
     }

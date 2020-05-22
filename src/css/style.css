@@ -264,7 +264,7 @@ body::-webkit-scrollbar-thumb {
         color: #f7f7f2; }
         @media only screen and (max-width: 44em) {
           .landing-heading-bottom, .landing-heading-bottom:link, .landing-heading-bottom:visited {
-            padding: 5rem 0 0 0; } }
+            padding: 5rem 0; } }
 
 .star {
   position: absolute; }
