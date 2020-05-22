@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  animation: fadeIn .5s ease-out 0.5s;
+  animation: fadeIn 0.5s ease-out 0.5s;
   animation-fill-mode: backwards;
 
   &-text {
@@ -125,37 +125,17 @@
 
   &-form {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    margin: 12rem 15rem 12rem 5rem;
+    margin: 12rem auto;
     font-size: 2.6rem;
 
     @include respond(phone) {
       flex-direction: column;
-      margin: 10rem 15rem 0rem 5rem;
-    //   padding-bottom: 10rem;
-    }
-
-    &-col {
-      &-1 {
-        width: 40rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-left: 10rem;
-      }
-      &-2 {
-        width: 40rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 0rem;
-        margin-left: 10rem;
-      }
+      margin: 15rem 0 0;
+      padding-bottom: 15rem;
     }
 
     &-group {
@@ -166,41 +146,46 @@
       margin-bottom: 5rem;
 
       &::after {
-          content: "";
-          position: relative;
-          display: block;
-          height: 4px;
-          width: 100%;
-          background-color: #fff;
-          transform: scaleX(0);
-          transform-origin: 0%;
-          transition: transform .5s ease-out;
-          top: 0;
+        content: "";
+        position: relative;
+        display: block;
+        height: 4px;
+        width: 100%;
+        background-color: #fff;
+        transform: scaleX(0);
+        transform-origin: 0%;
+        transition: transform 0.3s ease;
+        top: 0;
       }
 
       &:focus-within {
-          border-color: transparent;
+        border-color: transparent;
 
-          &::after {
-              transform: scaleX(1);
-          }
+        &::after {
+          transform: scaleX(1);
+        }
 
-          & .contact-form-group__label {
-              transform: translateY(-3.5rem);
-          }
+        & .contact-form-group__label {
+          transform: translateY(-3.5rem);
+        }
+      }
+
+      &__input:not(:placeholder-shown) + &__label {
+        transform: translateY(-3.5rem);
       }
 
       &__label {
+        // z-index: -1;
         margin: 3rem 0 1rem;
         align-self: start;
         color: #eee;
         position: absolute;
-        bottom: .5rem;
+        bottom: 0.5rem;
         font-size: 2rem;
-        transition: transform .5s ease;
+        transition: transform 0.5s ease;
 
         &:hover {
-            cursor: text;
+          cursor: text;
         }
       }
 
@@ -209,26 +194,11 @@
         color: #eee;
         border: none;
         border-bottom: 2px dashed #666;
-        padding: .5rem 0rem;
+        padding: 0.5rem 0rem;
         font-size: 3rem;
 
         &:hover {
-            cursor: text;
-        }
-
-      }
-
-      &__textarea {
-        background-color: #333;
-        color: #eee;
-        border: 1px solid #111;
-        border-radius: 3px;
-        height: 185px;
-        padding: 1.5rem 2rem;
-        font-size: 2.8rem;
-
-        @include respond(phone) {
-          height: 100px;
+          cursor: text;
         }
       }
     }
@@ -242,7 +212,7 @@
       padding: 1rem 1.5rem;
       text-transform: uppercase;
       margin-top: 3rem;
-      align-self: flex-end;
+      align-self: center;
       transition: all 0.2s ease-out;
 
       &:hover {

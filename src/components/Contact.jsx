@@ -42,61 +42,61 @@ export default class Contact extends Component {
           action="https://formspree.io/xjvojgwr"
           method="POST"
         >
-          <div class="contact-form-col-1">
-            <div class="contact-form-group">
-              <label class="contact-form-group__label" for="name">
-                Name
-              </label>
-              <input
-                class="contact-form-group__input"
-                type="text"
-                name="name"
-                id="name"
-                required
-              />
-            </div>
-
-            <div class="contact-form-group">
-              <label class="contact-form-group__label" for="email">
-                Email
-              </label>
-              <input
-                class="contact-form-group__input"
-                type="email"
-                name="_replyto"
-                id="email"
-                required
-              />
-            </div>
-
-            <div class="contact-form-group">
-              <label class="contact-form-group__label" for="company">
-                Company/Organization
-              </label>
-              <input
-                class="contact-form-group__input"
-                type="text"
-                name="company"
-                id="company"
-              />
-            </div>
+          <div class="contact-form-group">
+            <input
+              class="contact-form-group__input"
+              type="text"
+              placeholder=""
+              name="name"
+              id="name"
+              required
+            />
+            <label class="contact-form-group__label" for="name">
+              Name
+            </label>
           </div>
 
-          <div class="contact-form-col-2">
-            <div class="contact-form-group">
-              <label class="contact-form-group__label" for="message">
-                Message
-              </label>
-              <textarea
-                class="contact-form-group__textarea"
-                name="message"
-                id="message"
-              ></textarea>
-            </div>
-            <button class="contact-form-button" type="submit">
-              Submit
-            </button>
+          <div class="contact-form-group">
+            <input
+              class="contact-form-group__input"
+              type="email"
+              placeholder=""
+              name="_replyto"
+              id="email"
+              required
+            />
+            <label class="contact-form-group__label" for="email">
+              Email
+            </label>
           </div>
+
+          <div class="contact-form-group">
+            <input
+              class="contact-form-group__input"
+              type="text"
+              placeholder=""
+              name="company"
+              id="company"
+            />
+            <label class="contact-form-group__label" for="company">
+              Company/Organization
+            </label>
+          </div>
+
+          <div class="contact-form-group">
+            <input
+              class="contact-form-group__input"
+              name="message"
+              placeholder=""
+              id="message"
+            />
+            <label class="contact-form-group__label" for="message">
+              Message
+            </label>
+          </div>
+          <button class="contact-form-button" type="submit">
+            Submit
+          </button>
         </form>
       </section>
     );
