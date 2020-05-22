@@ -4,7 +4,7 @@ import React, { Component } from "react";
 export default class Contact extends Component {
   render() {
     return (
-      <section class="contact" id="contact">
+      <section class="contact">
         <div class="contact-text">
           <h1 class="contact-text__title">
             Let's build something great together.
@@ -70,7 +70,7 @@ export default class Contact extends Component {
             </div>
 
             <div class="contact-form-group">
-              <label class="contact-form-group__label" for="name">
+              <label class="contact-form-group__label" for="company">
                 Company/Organization
               </label>
               <input

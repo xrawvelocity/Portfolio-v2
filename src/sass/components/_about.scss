@@ -14,20 +14,18 @@
     margin-bottom: 5rem;
 
     &-each {
-        width: 100%;
+      width: 100%;
 
-        &-container {
-
-            &-title {
-                font-size: 3.2rem;
-                font-weight: 800;
-                margin-bottom: 1rem;
-            }
-
-            &-paragraph {
-
-            }
+      &-container {
+        &-title {
+          font-size: 3.2rem;
+          font-weight: 800;
+          margin-bottom: 1rem;
         }
+
+        &-paragraph {
+        }
+      }
     }
   }
 
@@ -56,8 +54,8 @@
     flex-direction: column;
     padding-bottom: 10rem;
 
-    @include respond(phone){
-        padding-bottom: 10rem;
+    @include respond(phone) {
+      padding-bottom: 10rem;
     }
 
     &-title {
@@ -69,11 +67,11 @@
     &-list {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      padding: 3rem 0 0 20rem;
-      margin: 0 auto;
+      padding: 3rem 0 0 15rem;
+
       justify-content: center;
       align-items: center;
-      width: 100%;
+      width: 90%;
 
       @include respond(phone) {
         grid-template-columns: repeat(auto-fit, 200px);
@@ -87,8 +85,8 @@
         align-items: center;
         margin: 2rem 0;
 
-        @include respond(phone){
-            font-size: 2.6rem;
+        @include respond(phone) {
+          font-size: 2.6rem;
         }
 
         &-image {
