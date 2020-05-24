@@ -92,7 +92,7 @@ export default class About extends Component {
           <h2 className="about-story-title" style={{marginTop: "30px"}}>Background</h2>
           <p className="about-story-paragraph">
             Self taugh web developer since June 2019. Attended Ironhack Miami
-            Coding Bootcamp from January 2020 to March 2020.
+            Coding Bootcamp from January 2020 to March 2020. Web Developer Intern From March 2020 to May 2020. Freelancer since.
           </p>
         </div>
         <div className="about-picture"></div>

@@ -10,7 +10,7 @@
   font-size: 3rem;
 
   @include respond(phone) {
-      background-size: 200% 200%;
+    background-size: 200% 200%;
   }
 
   &-top {
@@ -20,8 +20,6 @@
     padding: 10rem 10% 5rem;
     animation: moveInTop 1s ease 0.75s;
     animation-fill-mode: backwards;
-
-
 
     &-logo {
       font-family: "modernplate";
@@ -85,9 +83,9 @@
     width: 65%;
     padding: 15rem 10% 5rem;
     line-height: 1.6;
-    @include respond(phone){
-        width: 100%;
-        padding: 5rem 10%;
+    @include respond(phone) {
+      width: 100%;
+      padding: 20% 10% 10%;
     }
 
     &-top {
@@ -95,7 +93,9 @@
         font-size: 5rem;
         animation: moveInBottom 1s ease 0.75s;
         animation-fill-mode: backwards;
-        
+        @include respond(phone) {
+          font-size: 3rem;
+        }
       }
       &-subtitle {
         margin-top: 3rem;
@@ -104,6 +104,10 @@
         width: 80%;
         animation: moveInBottom 1s ease 1s;
         animation-fill-mode: backwards;
+        @include respond(phone) {
+          font-size: 2.8rem;
+
+        }
       }
     }
 
@@ -117,8 +121,8 @@
         text-decoration: none;
         font-weight: 300;
         color: #f7f7f2;
-        @include respond(phone){
-            padding: 5rem 0;
+        @include respond(phone) {
+          padding: 2% 0;
         }
       }
     }
@@ -173,8 +177,8 @@
   transform: rotateZ(45deg);
 
   @include respond(phone) {
-      left: 10%;
-      top: 10%;
+    left: 10%;
+    top: 10%;
   }
 }
 

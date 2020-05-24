@@ -2,7 +2,7 @@ import React, { Component, Fragment } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import { Transition } from "react-spring/renderprops";
+
 
 export default class Home extends Component {
   render() {
