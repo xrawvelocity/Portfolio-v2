@@ -21,6 +21,10 @@
     animation: moveInTop 1s ease 0.75s;
     animation-fill-mode: backwards;
 
+    @include respond(phone) {
+      padding: 4rem 10% 1rem;
+    }
+
     &-logo {
       font-family: "modernplate";
       font-size: 4rem;
@@ -94,7 +98,7 @@
         animation: moveInBottom 1s ease 0.75s;
         animation-fill-mode: backwards;
         @include respond(phone) {
-          font-size: 3rem;
+          font-size: 4rem;
         }
       }
       &-subtitle {
@@ -122,7 +126,7 @@
         font-weight: 300;
         color: #f7f7f2;
         @include respond(phone) {
-          padding: 2% 0;
+          padding: 5% 0;
         }
       }
     }
