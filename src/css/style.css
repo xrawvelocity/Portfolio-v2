@@ -1026,7 +1026,8 @@ body::-webkit-scrollbar-thumb {
         margin: 2rem auto; }
         @media only screen and (max-width: 44em) {
           .about-skills-list-each {
-            font-size: 2.6rem; } }
+            font-size: 2.6rem;
+            margin: 2rem 0; } }
         .about-skills-list-each-image {
           height: 35px;
           width: 35px;
