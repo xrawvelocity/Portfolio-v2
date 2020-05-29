@@ -101,7 +101,7 @@
       &-each {
         display: flex;
         align-items: center;
-        margin: 2rem 0;
+        margin: 2rem auto;
 
         @include respond(phone) {
           font-size: 2.6rem;
