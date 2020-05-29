@@ -992,7 +992,7 @@ body::-webkit-scrollbar-thumb {
     .about-story-title {
       margin: 2rem 0 5rem; }
     .about-story-paragraph {
-      width: 50%; }
+      width: 70%; }
       @media only screen and (max-width: 44em) {
         .about-story-paragraph {
           width: 100%; } }
