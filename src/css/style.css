@@ -172,7 +172,7 @@ body::-webkit-scrollbar-thumb {
     animation-fill-mode: backwards; }
     @media only screen and (max-width: 44em) {
       .landing-top {
-        padding: 4rem 10% 1rem; } }
+        padding: 10rem 10% 0rem; } }
     .landing-top-logo {
       font-family: "modernplate";
       font-size: 4rem; }
@@ -808,7 +808,7 @@ body::-webkit-scrollbar-thumb {
     text-align: center; }
     @media only screen and (max-width: 44em) {
       .contact-text {
-        margin: 4rem 0 0;
+        margin: 10rem 0 0;
         width: 80%; } }
     .contact-text__title {
       font-size: 4rem; }
@@ -953,6 +953,9 @@ body::-webkit-scrollbar-thumb {
 .about {
   animation: fadeIn 0.5s ease-out 0.5s;
   animation-fill-mode: backwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   overflow-y: visible; }
   .about-services {
     display: grid;
@@ -1090,3 +1093,12 @@ body::-webkit-scrollbar-thumb {
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center; }
+
+.youtube-video {
+  height: 315px;
+  width: 560px;
+  margin: 10rem auto; }
+  @media only screen and (max-width: 44em) {
+    .youtube-video {
+      height: 200px;
+      width: 90vw; } }

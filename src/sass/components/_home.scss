@@ -22,7 +22,7 @@
     animation-fill-mode: backwards;
 
     @include respond(phone) {
-      padding: 4rem 10% 1rem;
+      padding: 10rem 10% 0rem;
     }
 
     &-logo {

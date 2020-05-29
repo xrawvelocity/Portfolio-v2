@@ -18,7 +18,7 @@ export default class About extends Component {
   render() {
     return (
       <section className="about">
-        <div className="about-story">
+        {/* <div className="about-story">
           <h2 className="about-story-title">Services</h2>
           <div className="about-services">
             <div className="about-services-each">
@@ -87,7 +87,8 @@ export default class About extends Component {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
+        <iframe className="youtube-video" title="Web Dev Journey" src="https://www.youtube.com/embed/vZATCcCbpSw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"></iframe>
         <div className="about-story">
           <h2 className="about-story-title" style={{marginTop: "30px"}}>Background</h2>
           <p className="about-story-paragraph">
