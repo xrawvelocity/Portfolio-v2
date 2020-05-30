@@ -3,9 +3,9 @@
   "name": "Victor Fernandez Web Developer",
   "icons": [
     {
-      "src": "portfolioLogoNoBG.png",
+      "src": "vicdevlogo.png",
       "type": "image/png",
-      "sizes": "664x376"
+      "sizes": "231x231"
     }
   ],
   "start_url": ".",
