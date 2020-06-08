@@ -28,7 +28,7 @@
 
     @include respond(phone) {
       flex-direction: column;
-      height: 90%;
+      height: 80vh;
       padding: 3rem;
     }
   }
