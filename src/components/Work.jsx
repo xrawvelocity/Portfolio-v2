@@ -10,6 +10,62 @@ export default class Work extends Component {
     return (
       <section className="work">
         <div className="work-grid">
+
+          <div className="work-grid-card-container">
+            <div className="work-grid-card">
+              <div className="work-grid-card__side work-grid-card__side--front">
+                <div className="work-grid-card__picture work-grid-card__picture--5">
+                  &nbsp;
+                </div>
+                <h4 className="work-grid-card__heading">
+                  <span className="work-grid-card__heading-image work-grid-card__heading-image--5"></span>
+                  <span className="work-grid-card__heading-span work-grid-card__heading-span--5">
+                    TheRusticDude
+                  </span>
+                </h4>
+                <div className="work-grid-card__details">
+                  <ul>
+                    <li>
+                      React.js{" "}
+                      <span className="work-grid-card__details-logo-react"></span>
+                    </li>
+                    <li>
+                      SASS{" "}
+                      <span className="work-grid-card__details-logo-sass"></span>
+                    </li>
+                    <li>
+                      Javascript{" "}
+                      <span className="work-grid-card__details-logo-js"></span>
+                    </li>
+                    <li>
+                      Firebase{" "}
+                      <span className="work-grid-card__details-logo-firebase"></span>
+                    </li>
+                    <li>
+                      Premiere Pro{" "}
+                      <span className="work-grid-card__details-logo-premiere"></span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="work-grid-card__side work-grid-card__side--back work-grid-card__side--back-5">
+                <div className="work-grid-card__cta">
+                  <p className="work-grid-card__description">
+                    Portfolio for a small carpenter company with hidden admin route
+                  </p>
+                  <div
+                    onClick={() => {
+                      this.setState({ popup: "therusticdude" });
+                    }}
+                    className="work-grid-card__btn"
+                  >
+                    More Info
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div className="work-grid-card-container">
             <div className="work-grid-card">
               <div className="work-grid-card__side work-grid-card__side--front">
@@ -179,6 +235,45 @@ export default class Work extends Component {
             </div>
           </div>
         </div>
+
+        {this.state.popup === "therusticdude" ? (
+          <div className="work-popup">
+            <div className="work-popup-content">
+              <div className="work-popup-demo work-popup-demo_therusticdude"></div>
+              <FontAwesomeIcon
+                onClick={() => {
+                  this.setState({ popup: "" });
+                }}
+                icon={faTimes}
+                className="work-popup-info-close"
+              />
+              <div className="work-popup-info">
+                <div className="work-popup-info-text">
+                  This project taught me about working with a client who had no previous online exposure aside from an offerup store.
+                  I made their name, logo, website, video, and social medias.
+                </div>
+                <div className="work-popup-info-btns">
+                  <a
+                    href="https://www.therusticdude.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="work-popup-info-btns_demo"
+                  >
+                    Demo
+                  </a>
+                  <a
+                    href="https://github.com/xrawvelocity/theRusticDude"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="work-popup-info-btns_code"
+                  >
+                    Code
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        ) : null}
         {this.state.popup === "fitsocial" ? (
           <div className="work-popup">
             <div className="work-popup-content">

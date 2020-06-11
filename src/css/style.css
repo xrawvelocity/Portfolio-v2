@@ -441,6 +441,8 @@ body::-webkit-scrollbar-thumb {
             background-image: linear-gradient(120deg, rgba(5, 142, 151, 0.9), #09757b); }
           .work-grid-card__side--back-4 {
             background-image: linear-gradient(120deg, rgba(35, 35, 35, 0.9), #424342); }
+          .work-grid-card__side--back-5 {
+            background-image: linear-gradient(120deg, rgba(35, 35, 35, 0.9), #424342); }
       .work-grid-card:hover .work-grid-card__side--front {
         transform: rotateY(-180deg); }
       .work-grid-card:hover .work-grid-card__side--back {
@@ -459,6 +461,8 @@ body::-webkit-scrollbar-thumb {
           background-image: linear-gradient(to right bottom, #777, #999), url("../images/officebg.jpg"); }
         .work-grid-card__picture--4 {
           background-image: linear-gradient(to right bottom, #777, #999), url("https://trello-backgrounds.s3.amazonaws.com/SharedBackground/2397x1600/5ee21529db5b4961f73e697ebe9e215d/photo-1574680096145-d05b474e2155.jpg"); }
+        .work-grid-card__picture--5 {
+          background-image: linear-gradient(to right bottom, #777, #999), url("../images/rusticdudebg.png"); }
       .work-grid-card__heading {
         font-size: 2.8rem;
         font-weight: 300;
@@ -511,6 +515,14 @@ body::-webkit-scrollbar-thumb {
             .work-grid-card__heading-image--4 {
               width: 80px;
               height: 80px; } }
+        .work-grid-card__heading-image--5 {
+          width: 80px;
+          height: 80px;
+          background-image: url("../images/theRusticDudeLogo.png"); }
+          @media only screen and (max-width: 44em) {
+            .work-grid-card__heading-image--5 {
+              width: 80px;
+              height: 80px; } }
       .work-grid-card__heading-span {
         padding: 0.5rem;
         -webkit-box-decoration-break: clone;
@@ -526,6 +538,9 @@ body::-webkit-scrollbar-thumb {
         .work-grid-card__heading-span--4 {
           width: 50%;
           background-image: linear-gradient(to right bottom, rgba(35, 35, 35, 0.85), rgba(66, 67, 66, 0.85)); }
+        .work-grid-card__heading-span--5 {
+          width: 70%;
+          background-image: linear-gradient(to right bottom, rgba(231, 130, 0, 0.85), rgba(185, 105, 0, 0.85)); }
       .work-grid-card__details {
         padding: 3rem; }
         .work-grid-card__details ul {
@@ -614,6 +629,11 @@ body::-webkit-scrollbar-thumb {
           background-position: center; }
         .work-grid-card__details-logo-js {
           background-image: url("../images/logos/javascript.svg");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center; }
+        .work-grid-card__details-logo-premiere {
+          background-image: url("../images/logos/premiereprologo.png");
           background-size: contain;
           background-repeat: no-repeat;
           background-position: center; }
@@ -728,6 +748,8 @@ body::-webkit-scrollbar-thumb {
     @media only screen and (max-width: 44em) {
       .work-popup-demo {
         height: 60%; } }
+    .work-popup-demo_therusticdude {
+      background-image: url("../images/therusticdudedemo.gif"); }
     .work-popup-demo_fitsocial {
       background-image: url("../images/fitsocialdemo.gif"); }
       @media only screen and (max-width: 44em) {

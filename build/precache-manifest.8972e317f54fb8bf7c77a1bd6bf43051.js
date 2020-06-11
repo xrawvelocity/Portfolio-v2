@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "71103c3841219a584981c9bc750663a3",
+    "revision": "9d582d69f02f75d69f341a21eb066cbb",
     "url": "/index.html"
   },
   {
-    "revision": "951b6746739eee52a11e",
-    "url": "/static/css/main.be87702e.chunk.css"
+    "revision": "666febe8268350b2aa3e",
+    "url": "/static/css/main.b13f7b86.chunk.css"
   },
   {
-    "revision": "19c91a59bb17b7d974c8",
-    "url": "/static/js/2.33691426.chunk.js"
+    "revision": "0b5254a6c26d58c589fd",
+    "url": "/static/js/2.760ad1aa.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/static/js/2.33691426.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.760ad1aa.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "951b6746739eee52a11e",
-    "url": "/static/js/main.379afeb7.chunk.js"
+    "revision": "666febe8268350b2aa3e",
+    "url": "/static/js/main.1cb64948.chunk.js"
   },
   {
     "revision": "286249a9c887aa7bb957",
@@ -88,6 +88,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/officebg.5a439fda.jpg"
   },
   {
+    "revision": "73b45f535c6e96324694033a0350e6a9",
+    "url": "/static/media/premiereprologo.73b45f53.png"
+  },
+  {
     "revision": "82a318ccea22a8af9fc4590f41df9238",
     "url": "/static/media/reactjslogo.82a318cc.png"
   },
@@ -96,12 +100,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/reduxlogo.c8f44df3.png"
   },
   {
+    "revision": "e604437367004681794cc3c493662222",
+    "url": "/static/media/rusticdudebg.e6044373.png"
+  },
+  {
     "revision": "f978ee4a6bd3c5ef1ec06359d6cd291d",
     "url": "/static/media/sanspicBareLogo.f978ee4a.svg"
   },
   {
     "revision": "b446ca5a397c1ef6fb94cd02c4e94335",
     "url": "/static/media/sasslogo.b446ca5a.svg"
+  },
+  {
+    "revision": "348ca9aa4db87d64356bad229aaa32d4",
+    "url": "/static/media/therusticdudedemo.348ca9aa.gif"
   },
   {
     "revision": "0c6303ea75a8d0b1342a6339fe3d2b5f",
