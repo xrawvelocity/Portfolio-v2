@@ -513,7 +513,9 @@ body::-webkit-scrollbar-thumb {
         .work-grid-card__heading-image--5 {
           width: 80px;
           height: 80px;
-          background-image: url("../images/theRusticDudeLogo.png"); }
+          background-image: url("../images/theRusticDudeLogo.png");
+          background-color: #fdfdfd;
+          border-radius: 50%; }
           @media only screen and (max-width: 44em) {
             .work-grid-card__heading-image--5 {
               width: 80px;
