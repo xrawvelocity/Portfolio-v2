@@ -99,7 +99,7 @@ html {
   font-size: 62.5%;
   background-color: #000;
   scroll-behavior: smooth;
-  overflow-x: hidden; }
+  overflow-x: hidden !important; }
   @media only screen and (max-width: 100em) {
     html {
       font-size: 60%; } }
@@ -151,7 +151,7 @@ body::-webkit-scrollbar-thumb {
   background-color: #ccc; }
 
 .landing {
-  height: 100%;
+  height: auto;
   min-height: 100vh;
   width: 100vw;
   background-size: 300% 300%;
@@ -159,7 +159,8 @@ body::-webkit-scrollbar-thumb {
   animation: gradientBG 12s cubic-bezier(0.7, 0, 0.2, 1) infinite;
   color: #f7f7f2;
   font-weight: 500;
-  font-size: 3rem; }
+  font-size: 3rem;
+  padding-top: 5%; }
   @media only screen and (max-width: 44em) {
     .landing {
       background-size: 200% 200%; } }
@@ -167,12 +168,18 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 3%;
+    left: 0;
+    width: 100%;
     padding: 5rem 10% 5rem;
     animation: moveInTop 1s ease 0.75s;
-    animation-fill-mode: backwards; }
+    animation-fill-mode: backwards;
+    z-index: 1000000000;
+    mix-blend-mode: exclusion; }
     @media only screen and (max-width: 44em) {
       .landing-top {
-        padding: 10rem 10% 0rem; } }
+        padding: 0 10%; } }
     .landing-top-logo {
       font-family: "modernplate";
       font-size: 4rem; }
@@ -224,17 +231,13 @@ body::-webkit-scrollbar-thumb {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    height: 70vh;
+    height: 90vh;
     width: 65%;
-    padding: 15rem 10% 5rem;
+    padding: 0 10%;
     line-height: 1.6; }
-    @media only screen and (max-width: 90em) {
-      .landing-heading {
-        padding: 5rem 10%; } }
     @media only screen and (max-width: 44em) {
       .landing-heading {
-        width: 100%;
-        padding: 20% 10% 10%; } }
+        width: 100%; } }
     .landing-heading-top-title {
       font-size: 5rem;
       animation: moveInBottom 1s ease 0.75s;
@@ -255,29 +258,20 @@ body::-webkit-scrollbar-thumb {
     .landing-heading-bottom {
       animation: moveInBottom 1s ease 1.25s;
       animation-fill-mode: backwards; }
-      .landing-heading-bottom::after {
-        content: "";
-        position: relative;
-        display: block;
-        height: 3px;
-        width: 100%;
-        background-color: #fff;
-        transform: scaleX(0);
-        transform-origin: 0%;
-        transition: transform 300ms ease;
-        top: 2px; }
-      .landing-heading-bottom:hover::after {
-        transform: scaleX(1); }
-      .landing-heading-bottom:hover {
-        cursor: pointer; }
       .landing-heading-bottom, .landing-heading-bottom:link, .landing-heading-bottom:visited {
         text-decoration: none;
-        font-weight: 300;
         color: #f7f7f2;
-        padding-top: 5rem; }
+        margin-top: 10%;
+        padding: 1.5rem 2rem;
+        font-weight: 500;
+        background-color: #08165D;
+        transition: all .3s ease; }
+        .landing-heading-bottom:hover, .landing-heading-bottom:link:hover, .landing-heading-bottom:visited:hover {
+          box-shadow: 0rem 1rem 1rem #111;
+          transform: translateY(-0.5rem); }
         @media only screen and (max-width: 44em) {
           .landing-heading-bottom, .landing-heading-bottom:link, .landing-heading-bottom:visited {
-            padding: 5% 0; } }
+            margin: 20% 0 0; } }
 
 .star {
   position: absolute; }
@@ -396,7 +390,8 @@ body::-webkit-scrollbar-thumb {
   padding: 5rem;
   animation: fadeIn 0.5s ease-out 0.5s;
   animation-fill-mode: backwards;
-  overflow-y: visible !important; }
+  overflow-y: visible !important;
+  padding-top: 10%; }
   .work-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, 350px);
@@ -518,7 +513,9 @@ body::-webkit-scrollbar-thumb {
         .work-grid-card__heading-image--5 {
           width: 80px;
           height: 80px;
-          background-image: url("../images/theRusticDudeLogo.png"); }
+          background-image: url("../images/theRusticDudeLogo.png");
+          background-color: #fdfdfd;
+          border-radius: 50%; }
           @media only screen and (max-width: 44em) {
             .work-grid-card__heading-image--5 {
               width: 80px;
@@ -819,7 +816,9 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   align-items: center;
   animation: fadeIn 0.5s ease-out 0.5s;
-  animation-fill-mode: backwards; }
+  animation-fill-mode: backwards;
+  padding-top: 10%;
+  overflow-y: hidden; }
   .contact-text {
     display: flex;
     flex-direction: column;
