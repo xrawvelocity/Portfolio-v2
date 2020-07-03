@@ -130,18 +130,26 @@
     }
 
     &-bottom {
-      @include animBorder(300ms);
       animation: moveInBottom 1s ease 1.25s;
       animation-fill-mode: backwards;
       &,
       &:link,
       &:visited {
         text-decoration: none;
-        font-weight: 300;
         color: #f7f7f2;
-        padding-top: 5rem;
+        margin-top: 10%;
+        padding: 1.5rem 2rem;
+        font-weight: 500;
+        background-color: #08165D;
+        transition: all .3s ease;
+
+        &:hover {
+          box-shadow: 0rem 1rem 1rem #111;
+          transform: translateY(-.5rem);
+        }
+
         @include respond(phone) {
-          padding: 5% 0;
+          margin: 20% 0 0;
         }
       }
     }

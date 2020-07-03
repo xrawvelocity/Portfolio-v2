@@ -22,16 +22,20 @@ export default class Home extends Component {
         <div className="landing-heading">
           <div className="landing-heading-top">
             <h2 className="landing-heading-top-title">
-              Hi! I'm Victor, a freelance full-stack web developer based in Miami,
-              FL.
+              Hi! I'm Victor, a freelance full-stack web developer based in
+              Miami, FL.
             </h2>
             <p className="landing-heading-top-subtitle">
               I craft creative and result-oriented websites for forward-thinking
               brands, like yours.
             </p>
           </div>
-          <Link onClick={()=>this.props.setSelected("about")}I to="/about" className="landing-heading-bottom">
-            Learn More <FontAwesomeIcon icon={faChevronRight} />
+          <Link
+            onClick={() => this.props.setSelected("work")}
+            to="/work"
+            className="landing-heading-bottom"
+          >
+            View Work
           </Link>
         </div>
       </Fragment>
