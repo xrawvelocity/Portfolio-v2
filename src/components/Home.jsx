@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import About from "./About"
 
 
 export default class Home extends Component {
@@ -35,6 +36,7 @@ export default class Home extends Component {
             Learn More <FontAwesomeIcon icon={faChevronRight} />
           </Link>
         </div>
+        {/* <About /> */}
       </Fragment>
     );
   }
