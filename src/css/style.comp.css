@@ -390,8 +390,7 @@ body::-webkit-scrollbar-thumb {
   padding: 5rem;
   animation: fadeIn 0.5s ease-out 0.5s;
   animation-fill-mode: backwards;
-  overflow-y: visible !important;
-  padding-top: 10%; }
+  overflow-y: visible !important; }
   .work-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, 350px);
