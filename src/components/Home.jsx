@@ -36,7 +36,6 @@ export default class Home extends Component {
             Learn More <FontAwesomeIcon icon={faChevronRight} />
           </Link>
         </div>
-        <About />
       </Fragment>
     );
   }
